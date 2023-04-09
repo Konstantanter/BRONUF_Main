@@ -12,7 +12,13 @@ namespace TelegramBotIsSimple.Main.Commands.Menu.IndividualProject
         /// Команда "Заявка на базу данных"
         /// </summary>
         public CommandsApplicationDataBase() { }
+        /// <summary>
+        /// Переопределение имени команды
+        /// </summary>
         public override System.String Name { set; get; } = Buttons.Button.ButtonsApplicationDataBase;
+        /// <summary>
+        /// Переопределение исполнения команды
+        /// </summary>
         public override async void Execute(TelegramBotClient _client, long ChatId)
         {
             var button = new Buttons.Button();
