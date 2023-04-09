@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TelegramBotIsSimple.TelegramBotHelper">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIBACQIFCEAAAAIAAAIAAAAAAAAABAAAIAAAgAA=</HashCode>
+      <FileName>TelegramBotHelpers\InitialData\InitialDataHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Program">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAABAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Buttons.Button">
+    <Position X="4.75" Y="3" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>EGCMQAAAAAAihEAEAAIAIAQAMBB0QEQBAEjkhACwSAI=</HashCode>
+      <FileName>Main\Buttons\ButtonGetAllTheme.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.Commands">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Main\Commands\Commands.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.Menu.IndividualProject.CommandsApplicationDataBase">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Main\Commands\Menu\IndividualProject\ApplicationDataBase\CommandsApplicationDataBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.Menu.IndividualProject.CommandsApplicationInvention">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Main\Commands\Menu\IndividualProject\ApplicationForInvention\CommandsApplicationInvention.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.Menu.IndividualProject.CommansApplicationProgramm">
+    <Position X="13.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Main\Commands\Menu\IndividualProject\ApplicationProgramm\CommandsApplicationProgramm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.Menu.IndividualProject.CommandsApplicationScheme">
+    <Position X="20.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Main\Commands\Menu\IndividualProject\ApplicationScheme(TIMS)\CommandsApplicationScheme.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.Menu.IndividualProject.CommandsApplicationUtilityModel">
+    <Position X="18" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Main\Commands\Menu\IndividualProject\ApplicationUtilityModel\CommandsApplicationUtilityModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.Menu.IndividualProject.CommandsChildMenu">
+    <Position X="21.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Main\Commands\Menu\IndividualProject\CommandsChildMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.Menu.IndividualProject.CommandsDrawMainsMenu">
+    <Position X="20" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Main\Commands\Menu\IndividualProject\CommandsDrawMainsMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.Menu.IndividualProject.CommandsIndividualProject">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Main\Commands\Menu\IndividualProject\CommandsIndividualProject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.Menu.IndividualProject.CommandsAkt">
+    <Position X="16" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Main\Commands\Menu\ReadySolutionMode\Akt\CommandsAkt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.Menu.IndividualProject.CommandsBAK">
+    <Position X="16" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Main\Commands\Menu\ReadySolutionMode\BAK\CommandsBAK.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.Menu.IndividualProject.CommandsDataBase">
+    <Position X="23" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Main\Commands\Menu\ReadySolutionMode\DataBase\CommandsDataBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.Menu.IndividualProject.CommandsInvension">
+    <Position X="19.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Main\Commands\Menu\ReadySolutionMode\Invention\CommandsInvension.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.Menu.IndividualProject.CommandsNotRinc">
+    <Position X="16" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Main\Commands\Menu\ReadySolutionMode\NotRinc\CommandsNotRinc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.Menu.IndividualProject.CommandsPatentTIMS">
+    <Position X="21.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Main\Commands\Menu\ReadySolutionMode\PatentTIMS\CommandsPatentTIMS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.Menu.IndividualProject.CommandsRinc">
+    <Position X="8" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Main\Commands\Menu\ReadySolutionMode\Rinc\CommandsRinc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.Menu.IndividualProject.CommandsScopus">
+    <Position X="18.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Main\Commands\Menu\ReadySolutionMode\Scopus\CommandsScopus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.Menu.IndividualProject.CommandsUtilityModel">
+    <Position X="18" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Main\Commands\Menu\ReadySolutionMode\UtilityModel\CommandsUtilityModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.Menu.IndividualProject.CommandsReadySolutionMode">
+    <Position X="16" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Main\Commands\Menu\ReadySolutionMode\CommandsReadySolutionMode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.Menu.PatentEVM.FilesHelper">
+    <Position X="2.5" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Main\Commands\Menu\ReadySolutionMode\PatentEVM\FilesHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.MultipleCommands.MultipleCommandsPatentEVM">
+    <Position X="0.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAABAAEAAAAABAwAAgAAAAQAAEAAAAAACAAAAACAAEA=</HashCode>
+      <FileName>Main\Commands\Menu\ReadySolutionMode\PatentEVM\MultipleCommandsPatentEVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.MultipleCommands.MultipleRegUser">
+    <Position X="2.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAQABAQAAgAAAAQAAAIEAAAAAAAAAACAAUA=</HashCode>
+      <FileName>Main\Commands\Registration\MultipleRegUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.MultipleCommands.MultipleCommand">
+    <Position X="1.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAQAAgAAAAQAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Main\Commands\Resources\MultipleCommands\MultipleCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.Menu.SearchScientificPapers.GetForm16.CommandsGetForm16">
+    <Position X="20.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Main\Commands\Menu\SearchScientificPapers\GetForm16\CommandsGetForm16.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.Menu.SearchScientificPapers.GetForm16.ProjectHelper">
+    <Position X="0.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAIAAAAAAAAEEAAAAIAAgQAEIAAQAAAAQAACAQ=</HashCode>
+      <FileName>TelegramBotHelpers\Работа с командами\ProjectHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.Menu.UserFindProject.ProjectListHelper">
+    <Position X="7.75" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAEAAIBAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Main\Commands\Menu\SearchScientificPapers\GetForm16\ProjectListHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.Menu.UserFindProject.ProjectManager">
+    <Position X="11.25" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAgAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Main\Commands\Menu\SearchScientificPapers\GetForm16\ProjectListHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.Menu.SearchScientificPapers.CommandsSearchScientificPaper">
+    <Position X="18" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Main\Commands\Menu\SearchScientificPapers\CommandsSearchScientificPaper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.CommandsBack">
+    <Position X="25.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Main\Commands\Resources\Back\CommandsBack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.CommandsMainsMenu">
+    <Position X="11.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Main\Commands\CommandsMainsMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Commands.Start.CommandsStart">
+    <Position X="22.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Main\Commands\Resources\Start\CommandsStart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.DataBases.DataBase">
+    <Position X="0.5" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAABAAAQAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Main\DataBases\DataBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Projects.GenerationsDoc.Word_Gen">
+    <Position X="4.25" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAQAIACAgABAQAAAQAAFCCQgAAAAEiAUAAAAAAQA=</HashCode>
+      <FileName>Main\Projects\GenerationsDoc\GenListSveds.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Projects.Project">
+    <Position X="2.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAEAAQAAAAAAAEABAEgA=</HashCode>
+      <FileName>Main\Projects\Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Projects.ServiceCreatedProject">
+    <Position X="6" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAARAAAAAAABACAAAAAAIAAAAgAAAEAEAAAAAAAAA=</HashCode>
+      <FileName>Main\Projects\ServiceCreatedProject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.Projects.Theme">
+    <Position X="7.75" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAEAAAAAAAAAAEAAABAA=</HashCode>
+      <FileName>Main\Projects\Theme.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.User.Users">
+    <Position X="9.5" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAABAAAAgAAAAkAAFAACREABEYgACkAAQAAAAEBAQ=</HashCode>
+      <FileName>Main\User\Adress\ListAdress.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.User.Author">
+    <Position X="8" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Main\User\Author.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.User.BaseUser" Collapsed="true">
+    <Position X="9.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Main\User\BaseUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.User.Pravo">
+    <Position X="12.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Main\User\Pravo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.GeneralData">
+    <Position X="6" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Main\GeneralData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Main.MyPay">
+    <Position X="13" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAEAAAAAAAAACAAAIAAAABAAAABA=</HashCode>
+      <FileName>Main\MyPay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TelegramBotIsSimple.Serializer">
+    <Position X="4.25" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAEAAQAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Main\Serialiser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

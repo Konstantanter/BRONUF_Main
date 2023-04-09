@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F44AF185-22C3-4D53-A3B7-8F6207BE701F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TelegramBotIsSimple</RootNamespace>
+    <AssemblyName>TelegramBotIsSimple</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>money-safe_icon-icons.com_53091.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\Skynet\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="MihaZupan.HttpToSocks5Proxy, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\HttpToSocks5Proxy.1.4.0\lib\net45\MihaZupan.HttpToSocks5Proxy.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telegram.Bot, Version=16.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Telegram.Bot.16.0.0\lib\net45\Telegram.Bot.dll</HintPath>
+    </Reference>
+    <Reference Include="Yandex.Checkout.V3, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Yandex.Checkout.V3.1.4.0\lib\net45\Yandex.Checkout.V3.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassMainEnums.cs" />
+    <Compile Include="Main\Buttons\ButtonGetAllTheme.cs" />
+    <Compile Include="Main\Buttons\ButtonStop.cs" />
+    <Compile Include="Main\Buttons\Menu\ButtonsMenu.cs" />
+    <Compile Include="Main\Buttons\Menu\ChildMenu.cs" />
+    <Compile Include="Main\Buttons\Menu\IndividualProject\ApplicationDataBase\ButtonsApplicationDataBase.cs" />
+    <Compile Include="Main\Buttons\Menu\IndividualProject\ApplicationForInvention\ButtonsApplicationInvention.cs" />
+    <Compile Include="Main\Buttons\Menu\IndividualProject\ApplicationProgramm\ButtonsApplicationProgramm.cs" />
+    <Compile Include="Main\Buttons\Menu\IndividualProject\ApplicationScheme%28TIMS%29\BurronsApplicationScheme.cs" />
+    <Compile Include="Main\Buttons\Menu\IndividualProject\ApplicationUtilityModel\ButtonsApplicationUtilityModel.cs" />
+    <Compile Include="Main\Buttons\Menu\IndividualProject\IndividualProjectMenu.cs" />
+    <Compile Include="Main\Buttons\Menu\ReadySolutionMode\Akt\ButtonsAkt.cs" />
+    <Compile Include="Main\Buttons\Menu\ReadySolutionMode\BAK\ButtonsBAK.cs" />
+    <Compile Include="Main\Buttons\Menu\ReadySolutionMode\DataBase\ButtonsDataBase.cs" />
+    <Compile Include="Main\Buttons\Menu\ReadySolutionMode\Invention\ButtonsInvension.cs" />
+    <Compile Include="Main\Buttons\Menu\ReadySolutionMode\NotRinc\ButtonsNotRinc.cs" />
+    <Compile Include="Main\Buttons\Menu\ReadySolutionMode\PatentEVM\ButtonsPatentEVM.cs" />
+    <Compile Include="Main\Buttons\Menu\ReadySolutionMode\PatentTIMS\ButtonsPatentTIMS.cs" />
+    <Compile Include="Main\Buttons\Menu\ReadySolutionMode\ReadySolutionModeMenu.cs" />
+    <Compile Include="Main\Buttons\Menu\ReadySolutionMode\Rinc\ButtonsRinc.cs" />
+    <Compile Include="Main\Buttons\Menu\ReadySolutionMode\Scopus\ButtonsScopus.cs" />
+    <Compile Include="Main\Buttons\Menu\ReadySolutionMode\UtilityModel\ButtonsUtilityModel.cs" />
+    <Compile Include="Main\Buttons\Menu\SearchScientificPapers\GetForm16\ButtonGetForm16.cs" />
+    <Compile Include="Main\Buttons\Menu\SearchScientificPapers\SearchScientificPapersMenu.cs" />
+    <Compile Include="Main\Buttons\Registrarion\ButtonsRegistration.cs" />
+    <Compile Include="Main\Buttons\SpravSystem\Instruction\ButtonsInstruction.cs" />
+    <Compile Include="Main\Buttons\SpravSystem\ScientificPapers\ButtonsScientificPapersHelp.cs" />
+    <Compile Include="Main\Buttons\SpravSystem\SpravSystemMenu.cs" />
+    <Compile Include="Main\Buttons\SpravSystem\Support\ButtonsSupport.cs" />
+    <Compile Include="Main\Buttons\SpravSystem\UniversitiesAndOrganizations\UniversitiesAndOrganizationsButtons.cs" />
+    <Compile Include="Main\Commands\CommandsMainsMenu.cs" />
+    <Compile Include="Main\Commands\Menu\IndividualProject\ApplicationDataBase\CommandsApplicationDataBase.cs" />
+    <Compile Include="Main\Commands\Menu\IndividualProject\ApplicationForInvention\CommandsApplicationInvention.cs" />
+    <Compile Include="Main\Commands\Menu\IndividualProject\ApplicationProgramm\CommandsApplicationProgramm.cs" />
+    <Compile Include="Main\Commands\Menu\IndividualProject\ApplicationScheme%28TIMS%29\CommandsApplicationScheme.cs" />
+    <Compile Include="Main\Commands\Menu\IndividualProject\ApplicationUtilityModel\CommandsApplicationUtilityModel.cs" />
+    <Compile Include="Main\Commands\Menu\IndividualProject\CommandsChildMenu.cs" />
+    <Compile Include="Main\Commands\Menu\IndividualProject\CommandsDrawMainsMenu.cs" />
+    <Compile Include="Main\Commands\Menu\IndividualProject\CommandsIndividualProject.cs" />
+    <Compile Include="Main\Commands\Menu\ReadySolutionMode\Akt\CommandsAkt.cs" />
+    <Compile Include="Main\Commands\Menu\ReadySolutionMode\BAK\CommandsBAK.cs" />
+    <Compile Include="Main\Commands\Menu\ReadySolutionMode\CommandsReadySolutionMode.cs" />
+    <Compile Include="Main\Commands\Menu\ReadySolutionMode\DataBase\MultipleCommandsPatentBD.cs" />
+    <Compile Include="Main\Commands\Menu\ReadySolutionMode\Invention\CommandsInvension.cs" />
+    <Compile Include="Main\Commands\Menu\ReadySolutionMode\NotRinc\CommandsNotRinc.cs" />
+    <Compile Include="Main\Commands\Menu\ReadySolutionMode\PatentEVM\FilesHelper.cs" />
+    <Compile Include="Main\Commands\Menu\ReadySolutionMode\PatentTIMS\CommandsPatentTIMS.cs" />
+    <Compile Include="Main\Commands\Menu\ReadySolutionMode\Rinc\CommandsRinc.cs" />
+    <Compile Include="Main\Commands\Menu\ReadySolutionMode\Scopus\CommandsScopus.cs" />
+    <Compile Include="Main\Commands\Menu\ReadySolutionMode\UtilityModel\CommandsUtilityModel.cs" />
+    <Compile Include="Main\Commands\Menu\SearchScientificPapers\CommandsSearchScientificPaper.cs" />
+    <Compile Include="Main\Commands\Menu\SearchScientificPapers\GetForm16\CommandsGetForm16.cs" />
+    <Compile Include="Main\Commands\Menu\SearchScientificPapers\GetForm16\ProjectListHelper.cs" />
+    <Compile Include="Main\Commands\Registration\MultipleRegUser.cs" />
+    <Compile Include="Main\Commands\Resources\Start\CommandsStart.cs" />
+    <Compile Include="Main\DataBases\DataBase.cs" />
+    <Compile Include="Main\Projects\GenerationsDoc\GenListSveds.cs" />
+    <Compile Include="Main\Projects\ServiceCreatedPatentBD.cs" />
+    <Compile Include="Main\Projects\ServiceCreatedPatentEVM.cs" />
+    <Compile Include="Main\User\Adress\CityHelper.cs" />
+    <Compile Include="TelegramBotHelpers\InitialData\InitialDataHelper.cs" />
+    <Compile Include="TelegramBotHelpers\MultipleCommandHelper\MultipleCommand.cs" />
+    <Compile Include="Main\Commands\Menu\ReadySolutionMode\PatentEVM\MultipleCommandsPatentEVM.cs" />
+    <Compile Include="TelegramBotHelpers\SimpleCommandHelper\SimpleCommand.cs" />
+    <Compile Include="Main\Buttons\Button.cs" />
+    <Compile Include="Main\Commands\Resources\Back\CommandsBack.cs" />
+    <Compile Include="Main\Commands\Resources\MultipleCommands\MultipleCommand.cs" />
+    <Compile Include="Main\Commands\Commands.cs" />
+    <Compile Include="Main\GeneralData.cs" />
+    <Compile Include="Main\MyPay.cs" />
+    <Compile Include="Main\Projects\GenerationsDoc\Word_Automizer.cs" />
+    <Compile Include="Main\Projects\Project.cs" />
+    <Compile Include="Main\Projects\ServiceCreatedProject.cs" />
+    <Compile Include="Main\Projects\Theme.cs" />
+    <Compile Include="Main\Serialiser.cs" />
+    <Compile Include="Main\User\Author.cs" />
+    <Compile Include="Main\User\BaseUser.cs" />
+    <Compile Include="Main\User\KemVyd\ListKemVyd.cs" />
+    <Compile Include="Main\User\Pravo.cs" />
+    <Compile Include="Main\User\Users.cs" />
+    <Compile Include="Main\User\Vklad\ListVklad.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TelegramBotHelpers\TelegramBotHelper.cs" />
+    <Compile Include="TelegramBotHelpers\Работа с командами\CommandsHelper.cs" />
+    <Compile Include="TelegramBotHelpers\Работа с командами\ProjectHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Resources\ShablonSved.docx" />
+    <None Include="Resources\Дополн.doc" />
+    <None Include="Resources\Заявл.doc" />
+    <None Include="Resources\Карт.doc" />
+    <None Include="Resources\Листинг.doc" />
+    <None Include="Resources\Наклейка на диск.doc" />
+    <None Include="Resources\Оплата.doc" />
+    <None Include="Resources\Препровод.doc" />
+    <None Include="Resources\Приложение 3.doc" />
+    <None Include="Resources\Приложение 4.doc" />
+    <None Include="Resources\Реф.doc" />
+    <None Include="Resources\Шаблон_Свидетельства.docx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="money-safe_icon-icons.com_53091.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Main\Buttons\Menu\SearchScientificPapers\GetApplication\" />
+    <Folder Include="Main\Buttons\Menu\SearchScientificPapers\SearchApplicationBDTims\" />
+    <Folder Include="Main\Buttons\Menu\SearchScientificPapers\SearchUtilityInvencion\" />
+    <Folder Include="Main\Buttons\SpravSystem\AboutBRONUF\" />
+    <Folder Include="Main\Commands\SpravSystem\AboutBRONUF\" />
+    <Folder Include="Main\Commands\SpravSystem\Instruction\" />
+    <Folder Include="Main\Commands\SpravSystem\ScientificPapers\" />
+    <Folder Include="Main\Commands\SpravSystem\Support\" />
+    <Folder Include="Main\Commands\SpravSystem\UniversitiesAndOrganizations\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
