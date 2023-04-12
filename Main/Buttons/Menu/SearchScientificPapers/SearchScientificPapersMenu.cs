@@ -6,7 +6,7 @@ namespace TelegramBotIsSimple.Main.Buttons
     public partial class Button
     {
         /// <summary>
-        /// КНопка режима поиска научных трудов
+        /// Кнопка режима поиска научных трудов
         /// </summary>
         public const string ButtonsSearchScientificPapers = "Режим поиска научных трудов";
         /// <summary>
@@ -21,6 +21,9 @@ namespace TelegramBotIsSimple.Main.Buttons
                 //Инициализация клавиатуры
                 Keyboard = new List<List<KeyboardButton>>
                         {
+                    
+                    new List<KeyboardButton>{
+                            new KeyboardButton { Text = "🔎 " + ButtonsSearchScientificPapers}},
                         //Форма 16
                         new List<KeyboardButton>{
                             new KeyboardButton { Text = "📝 " + ButtonGetForm16}},

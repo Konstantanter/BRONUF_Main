@@ -48,45 +48,63 @@ namespace TelegramBotIsSimple.Main.Commands.Menu.UserFindProject
                 Word_Gen word_gen = new Word_Gen("", "");
                 List<ProjectHelper> projectHelpers = new List<ProjectHelper>();
                 DataBase dat = new DataBase();
-                SqlConnection connection = dat.getConnection();
-                SqlCommand sql1 = new SqlCommand("SET ARITHABORT ON;", connection);
-                sql1.CommandTimeout = 3000000;
-                sql1.ExecuteNonQuery();
-                SqlCommand sqlCommand = new SqlCommand("SELECT [registration_number], [authors], [right_holders], [contact_to_third_parties], [program_name], [reg_pub_date], [application_number], [application_data] FROM [dbo].[DataSveds] WHERE [authors] LIKE N'%" + NameUser + "%'", connection);
-                sqlCommand.CommandTimeout = 3000000;
-
-                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
-                int num = 0;
-                while (sqlDataReader.Read())
+            //dat.OpenConnection();
+            using (SqlConnection conn = dat.getConnection())
+            {
+                //Задаем подключение к команде
+                using (SqlCommand sqlCommand = new SqlCommand("SELECT [registration_number], [authors], [right_holders], [contact_to_third_parties], [program_name], [reg_pub_date], [application_number], [application_data] FROM [dbo].[DataSveds] WHERE [authors] LIKE N'%" + NameUser + "%'", conn))
                 {
-                    ProjectHelper projectHelper = new ProjectHelper();
-                    projectHelper.registration_number = sqlDataReader[0].ToString();
-                    projectHelper.program_name = sqlDataReader[4].ToString();
-                    projectHelper.registration_publish_date = sqlDataReader[5].ToString();
-                    projectHelper.typesProject = "Программа для ЭВМ:";
-                    ++num;
-                    projectHelpers.Add(projectHelper);
-                }
-                sqlDataReader.Close();
-                CountSved = projectHelpers.Count;
-                sql1.CommandTimeout = 3000000;
-                sql1.ExecuteNonQuery();
-                sqlCommand = new SqlCommand("SELECT [registration_number], [authors], [right_holders], [contact_to_third_parties], [program_name], [reg_pub_date], [application_number], [application_data] FROM [dbo].[DataBase] WHERE [authors] LIKE N'%" + NameUser + "%'", connection);
-                sqlCommand.CommandTimeout = 3000000;
+                    if (conn.State != System.Data.ConnectionState.Open)
+                        conn.Open();
+                    sqlCommand.CommandTimeout = 3000000;
+                    using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
+                    {
+                     
+                        while (sqlDataReader.Read())
+                        {
+                            ProjectHelper projectHelper = new ProjectHelper();
+                            projectHelper.registration_number = sqlDataReader[0].ToString();
+                            projectHelper.program_name = sqlDataReader[4].ToString();
+                            projectHelper.registration_publish_date = sqlDataReader[5].ToString();
+                            projectHelper.typesProject = "Программа для ЭВМ:";
+                          
+                            projectHelpers.Add(projectHelper);
+                        }
 
-                sqlDataReader = sqlCommand.ExecuteReader();
-                num = 0;
-                while (sqlDataReader.Read())
-                {
-                    ProjectHelper projectHelper = new ProjectHelper();
-                    projectHelper.registration_number = sqlDataReader[0].ToString();
-                    projectHelper.program_name = sqlDataReader[4].ToString();
-                    projectHelper.registration_publish_date = sqlDataReader[5].ToString();
-                    projectHelper.typesProject = "База данных:";
-                    ++num;
-                    projectHelpers.Add(projectHelper);
+                    }
+                   
+                    CountSved = projectHelpers.Count;
                 }
-                sqlDataReader.Close();
+            }
+
+            using (SqlConnection conn = dat.getConnection())
+            {
+                //Задаем подключение к команде
+                using (SqlCommand sqlCommand = new SqlCommand("SELECT [registration_number], [authors], [right_holders], [contact_to_third_parties], [program_name], [reg_pub_date], [application_number], [application_data] FROM [dbo].[DataBase] WHERE [authors] LIKE N'%" + NameUser + "%'", conn))
+                {
+                    if (conn.State != System.Data.ConnectionState.Open)
+                        conn.Open();
+                    sqlCommand.CommandTimeout = 3000000;
+                    using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
+                    {
+                       
+                        while (sqlDataReader.Read())
+                        {
+                            ProjectHelper projectHelper = new ProjectHelper();
+                            projectHelper.registration_number = sqlDataReader[0].ToString();
+                            projectHelper.program_name = sqlDataReader[4].ToString();
+                            projectHelper.registration_publish_date = sqlDataReader[5].ToString();
+                            projectHelper.typesProject = "База данных:";
+                            
+                            projectHelpers.Add(projectHelper);
+                        }
+
+                    }
+
+                    CountSved = projectHelpers.Count;
+                }
+            }
+
             CountSved = projectHelpers.Count;
             if (CountSved > 0)
                 {

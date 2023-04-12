@@ -51,6 +51,9 @@
   <PropertyGroup>
     <ApplicationIcon>money-safe_icon-icons.com_53091.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
@@ -113,7 +116,9 @@
     <Compile Include="Main\Buttons\Menu\ReadySolutionMode\Scopus\ButtonsScopus.cs" />
     <Compile Include="Main\Buttons\Menu\ReadySolutionMode\UtilityModel\ButtonsUtilityModel.cs" />
     <Compile Include="Main\Buttons\Menu\SearchScientificPapers\GetForm16\ButtonGetForm16.cs" />
+    <Compile Include="Main\Buttons\Menu\SearchScientificPapers\SearchApplicationBDTims\ButtonsSearchApplicationDBTims.cs" />
     <Compile Include="Main\Buttons\Menu\SearchScientificPapers\SearchScientificPapersMenu.cs" />
+    <Compile Include="Main\Buttons\Menu\SearchScientificPapers\SearchUtilityInvencion\ButtonsSearchUtilityInvencion.cs" />
     <Compile Include="Main\Buttons\Registrarion\ButtonsRegistration.cs" />
     <Compile Include="Main\Buttons\SpravSystem\Instruction\ButtonsInstruction.cs" />
     <Compile Include="Main\Buttons\SpravSystem\ScientificPapers\ButtonsScientificPapersHelp.cs" />
@@ -184,6 +189,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="app.manifest" />
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Resources\ShablonSved.docx" />
@@ -217,8 +223,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Main\Buttons\Menu\SearchScientificPapers\GetApplication\" />
-    <Folder Include="Main\Buttons\Menu\SearchScientificPapers\SearchApplicationBDTims\" />
-    <Folder Include="Main\Buttons\Menu\SearchScientificPapers\SearchUtilityInvencion\" />
     <Folder Include="Main\Buttons\SpravSystem\AboutBRONUF\" />
     <Folder Include="Main\Commands\SpravSystem\AboutBRONUF\" />
     <Folder Include="Main\Commands\SpravSystem\Instruction\" />

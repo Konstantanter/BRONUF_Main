@@ -16,7 +16,7 @@ namespace TelegramBotIsSimple.Main.Commands.Menu.SearchScientificPapers
         {
             var button = new Buttons.Button();
          
-            await _client.SendTextMessageAsync(ChatId, "Напиши чёнить", Telegram.Bot.Types.Enums.ParseMode.Html, replyMarkup: button.DrawScientificPapersMenu());
+            await _client.SendTextMessageAsync(ChatId, "Данный режим предназначен для формирования формы научных трудов, поиска и формирования дубликатов и др.", Telegram.Bot.Types.Enums.ParseMode.Html, replyMarkup: button.DrawScientificPapersMenu());
         }
         public override Commands ParentsComands { set; get; } = new CommandsMainsMenu();
     }

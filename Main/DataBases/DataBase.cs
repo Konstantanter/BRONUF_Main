@@ -18,7 +18,8 @@ namespace TelegramBotIsSimple.Main.DataBases
 
        public  DataBase()
         {
-            sqlConnection = new SqlConnection($"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={srt};Integrated Security=True;Connect Timeout=30");
+ 
+           // OpenConnection();
         }
         /// <summary>
         /// Строка подключения к БД
@@ -61,8 +62,9 @@ namespace TelegramBotIsSimple.Main.DataBases
         public SqlConnection getConnection()
         {
             //string str = ;
-            //System.Windows.Forms.MessageBox.Show("!");
-            return sqlConnection;
+
+            
+            return new SqlConnection($"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={srt};Integrated Security=True;Connect Timeout=30");
         }
     }
 }
