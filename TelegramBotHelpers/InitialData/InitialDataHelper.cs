@@ -47,22 +47,23 @@ namespace TelegramBotIsSimple
         /// Словарь Ид чата - Имя команды
         /// </summary>
         private Dictionary<long, string> _clientStates = new Dictionary<long, string>();
-        DataBase dataBase;
 
-        ServiceCreatedPatentBD createdPatentBD;
-        ServiceCreatedPatentEVM createdPatentEVM;
+
         /// <summary>
-        /// Класс для обработки csv файла
+        /// Вспомогательный класс поиска баз данных
         /// </summary>
-       // ProjectListHelper projectListHelper;
+        ServiceCreatedPatentBD createdPatentBD;
+        /// <summary>
+        /// Вспомогательный класс поиска программ для ЭВМ
+        /// </summary>
+        ServiceCreatedPatentEVM createdPatentEVM;
         /// <summary>
         /// Конструктор с параметром
         /// </summary>
         /// <param name="token">токен подключения к телеграмм</param>
         public TelegramBotHelper(string token)
         {
-            dataBase = new DataBase();
-            dataBase.OpenConnection();
+
             button = new Button();
 
             //createdProject = new ServiceCreatedProject();
