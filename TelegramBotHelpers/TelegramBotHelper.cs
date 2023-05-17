@@ -4,11 +4,11 @@ using System.Threading;
 using System.Threading.Tasks;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
-using TelegramBotIsSimple.Main;
-using TelegramBotIsSimple.Main.Commands.MultipleCommands;
-using TelegramBotIsSimple.Main.Projects;
+using BRONUF_Main.Main;
+using BRONUF_Main.Main.Commands.MultipleCommands;
+using BRONUF_Main.Main.Projects;
 
-namespace TelegramBotIsSimple
+namespace BRONUF_Main
 {
 
     /// <summary>

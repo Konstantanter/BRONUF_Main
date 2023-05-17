@@ -1,6 +1,6 @@
 ﻿using Telegram.Bot.Types.ReplyMarkups;
 
-namespace TelegramBotIsSimple.Main.Buttons
+namespace BRONUF_Main.Main.Buttons
 {
     /// <summary>
     /// Класс реализующий управление кнопками

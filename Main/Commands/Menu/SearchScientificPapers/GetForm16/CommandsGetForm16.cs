@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 using Telegram.Bot;
 using Telegram.Bot.Types.InputFiles;
-using TelegramBotIsSimple.Main.Commands.Menu.UserFindProject;
-using TelegramBotIsSimple.Main.User;
+using BRONUF_Main.Main.Commands.Menu.UserFindProject;
+using BRONUF_Main.Main.User;
 
-namespace TelegramBotIsSimple.Main.Commands.Menu.SearchScientificPapers.GetForm16
+namespace BRONUF_Main.Main.Commands.Menu.SearchScientificPapers.GetForm16
 {
     internal class CommandsGetForm16 : Commands
     {

@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
-using TelegramBotIsSimple.Main.Commands;
-using TelegramBotIsSimple.Main.Commands.Menu.IndividualProject;
-using TelegramBotIsSimple.Main.Commands.Menu.SearchScientificPapers;
-using TelegramBotIsSimple.Main.Commands.Menu.SearchScientificPapers.GetForm16;
+using BRONUF_Main.Main.Commands;
+using BRONUF_Main.Main.Commands.Menu.IndividualProject;
+using BRONUF_Main.Main.Commands.Menu.SearchScientificPapers;
+using BRONUF_Main.Main.Commands.Menu.SearchScientificPapers.GetForm16;
 
 
 
-namespace TelegramBotIsSimple
+namespace BRONUF_Main
 {
 
     /// <summary>

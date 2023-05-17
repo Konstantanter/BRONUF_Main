@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using TelegramBotIsSimple.Main.User;
+using BRONUF_Main.Main.User;
 
-namespace TelegramBotIsSimple.Main.Projects
+namespace BRONUF_Main.Main.Projects
 {
     [Serializable]
     /// <summary>

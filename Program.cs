@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Text;
-using TelegramBotIsSimple.Main;
-using TelegramBotIsSimple.Main.User;
+using BRONUF_Main.Main;
+using BRONUF_Main.Main.User;
 
-namespace TelegramBotIsSimple
+namespace BRONUF_Main
 {
 
     class Program
@@ -20,7 +20,7 @@ namespace TelegramBotIsSimple
 
             
                 //Создаём необходимые директории при запуске
-                TelegramBotIsSimple.Main.GeneralData genetal = new GeneralData();
+                BRONUF_Main.Main.GeneralData genetal = new GeneralData();
                 //протокол безопасного соединения
                 System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
                 //Вызов вспомогательного класса

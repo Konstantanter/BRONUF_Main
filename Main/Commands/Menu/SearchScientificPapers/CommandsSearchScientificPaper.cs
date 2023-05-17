@@ -1,6 +1,6 @@
 ﻿using Telegram.Bot;
 
-namespace TelegramBotIsSimple.Main.Commands.Menu.SearchScientificPapers
+namespace BRONUF_Main.Main.Commands.Menu.SearchScientificPapers
 {
     /// <summary>
     /// Команда  "Режим поиска научных трудов"

@@ -6,12 +6,12 @@ using System.Globalization;
 using System.IO;
 using System.Threading.Tasks;
 using Telegram.Bot;
-using TelegramBotIsSimple.Main.Commands.Menu.SearchScientificPapers.GetForm16;
-using TelegramBotIsSimple.Main.DataBases;
-using TelegramBotIsSimple.Main.Projects.GenerationsDoc;
-using TelegramBotIsSimple.Main.User;
+using BRONUF_Main.Main.Commands.Menu.SearchScientificPapers.GetForm16;
+using BRONUF_Main.Main.DataBases;
+using BRONUF_Main.Main.Projects.GenerationsDoc;
+using BRONUF_Main.Main.User;
 
-namespace TelegramBotIsSimple.Main.Commands.Menu.UserFindProject
+namespace BRONUF_Main.Main.Commands.Menu.UserFindProject
 {
     /// <summary>
     /// Вспомогательный класс по генерации списка свидетельств пользователя

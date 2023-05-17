@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Telegram.Bot;
-using TelegramBotIsSimple.Main.Buttons;
-using TelegramBotIsSimple.Main.Projects;
-using TelegramBotIsSimple.Main.User;
-using TelegramBotIsSimple.Properties;
-using TelegramBotIsSimple.Main.Commands.Menu.IndividualProject;
-using TelegramBotIsSimple.Main.Commands.Menu.PatentEVM;
-using TelegramBotIsSimple.Main.DataBases;
+using BRONUF_Main.Main.Buttons;
+using BRONUF_Main.Main.Projects;
+using BRONUF_Main.Main.User;
+using BRONUF_Main.Properties;
+using BRONUF_Main.Main.Commands.Menu.IndividualProject;
+using BRONUF_Main.Main.Commands.Menu.PatentEVM;
+using BRONUF_Main.Main.DataBases;
 using System.Data.SqlClient;
 
-namespace TelegramBotIsSimple.Main.Commands.MultipleCommands
+namespace BRONUF_Main.Main.Commands.MultipleCommands
 
 {
     /// <summary>
@@ -132,7 +132,7 @@ namespace TelegramBotIsSimple.Main.Commands.MultipleCommands
                 System.IO.File.Delete(projetc.FileName);
             }
             //Получаем список проектов которые имеются в текущей теме
-            List<string> allFiles = System.IO.Directory.GetFiles(System.IO.Path.GetDirectoryName(TelegramBotIsSimple.Main.Projects.Theme.FileNamesThemeBD) + $"\\{projetc.NameTheme}\\").ToList();
+            List<string> allFiles = System.IO.Directory.GetFiles(System.IO.Path.GetDirectoryName(BRONUF_Main.Main.Projects.Theme.FileNamesThemeBD) + $"\\{projetc.NameTheme}\\").ToList();
             //Также потребуется вспомогательный класс для обработки файлов проектов           
             List<FilesHelper> listFileHelper = new List<FilesHelper>();
             //Добавим все файлы в наш вспомогательный класс

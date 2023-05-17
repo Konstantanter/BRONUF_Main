@@ -1,7 +1,7 @@
 ﻿using System;
 using Telegram.Bot;
 
-namespace TelegramBotIsSimple.Main.Commands
+namespace BRONUF_Main.Main.Commands
 {
     /// <summary>
     /// Команда "Основное меню"

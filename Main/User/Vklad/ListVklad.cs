@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace TelegramBotIsSimple.Main.User
+namespace BRONUF_Main.Main.User
 {
     public partial class Users
     {

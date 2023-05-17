@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using TelegramBotIsSimple.Main.Commands.MultipleCommands;
+using BRONUF_Main.Main.Commands.MultipleCommands;
 
 
 
-namespace TelegramBotIsSimple
+namespace BRONUF_Main
 {
 
     /// <summary>

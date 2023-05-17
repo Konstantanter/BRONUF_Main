@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TelegramBotIsSimple.Main.Projects
+namespace BRONUF_Main.Main.Projects
 {
     [Serializable]
     /// <summary>

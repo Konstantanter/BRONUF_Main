@@ -2,11 +2,11 @@
 using System.Data.SqlClient;
 using Telegram.Bot;
 using Telegram.Bot.Types.ReplyMarkups;
-using TelegramBotIsSimple.Main.DataBases;
-using TelegramBotIsSimple.Main.Projects;
+using BRONUF_Main.Main.DataBases;
+using BRONUF_Main.Main.Projects;
 using Yandex.Checkout.V3;
 
-namespace TelegramBotIsSimple.Main
+namespace BRONUF_Main.Main
 {
     /// <summary>
     /// Класс реализующий операции по платежам

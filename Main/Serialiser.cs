@@ -5,7 +5,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace TelegramBotIsSimple
+namespace BRONUF_Main
 {
     /// <summary>
     /// Класс для сериализации данных

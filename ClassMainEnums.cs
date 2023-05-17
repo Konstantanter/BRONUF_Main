@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TelegramBotIsSimple
+namespace BRONUF_Main
 {
     /// <summary>
     /// Типы научных проектов

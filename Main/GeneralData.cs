@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TelegramBotIsSimple.Main
+namespace BRONUF_Main.Main
 {
     /// <summary>
     /// Класс предназнчен для создания и хранения основных данных требуемых для хранения и считывания информации

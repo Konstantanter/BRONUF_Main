@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TelegramBotIsSimple.Main.Commands.Menu.SearchScientificPapers.GetForm16
+namespace BRONUF_Main.Main.Commands.Menu.SearchScientificPapers.GetForm16
 {
     public class ProjectHelper
     {

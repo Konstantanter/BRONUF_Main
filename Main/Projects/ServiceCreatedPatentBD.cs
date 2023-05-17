@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TelegramBotIsSimple.Main.Projects
+namespace BRONUF_Main.Main.Projects
 {
     public class ServiceCreatedPatentBD : ServiceCreatedProject
     {

@@ -1,4 +1,4 @@
-﻿namespace TelegramBotIsSimple.Main.Commands.Menu.PatentEVM
+﻿namespace BRONUF_Main.Main.Commands.Menu.PatentEVM
 {
     /// <summary>
     /// Вспомогательный класс для работы с файлами проектов

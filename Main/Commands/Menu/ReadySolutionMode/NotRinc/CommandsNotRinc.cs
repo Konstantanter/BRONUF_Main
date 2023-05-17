@@ -1,6 +1,6 @@
 ﻿using Telegram.Bot;
 
-namespace TelegramBotIsSimple.Main.Commands.Menu.IndividualProject
+namespace BRONUF_Main.Main.Commands.Menu.IndividualProject
 {
     /// <summary>
     /// "Соавторство: статья не РИНЦ"

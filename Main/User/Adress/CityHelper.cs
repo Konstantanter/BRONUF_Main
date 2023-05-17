@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TelegramBotIsSimple.Main.User
+namespace BRONUF_Main.Main.User
 {
     partial class Users
     {

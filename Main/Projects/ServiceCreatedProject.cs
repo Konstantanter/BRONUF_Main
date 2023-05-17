@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace TelegramBotIsSimple.Main.Projects
+namespace BRONUF_Main.Main.Projects
 {
     /// <summary>
     /// Технология генерации проектов
@@ -37,7 +37,7 @@ namespace TelegramBotIsSimple.Main.Projects
         /// <returns></returns>
         public List<string> GetNRandFiles(int N, string nameTheme)
         {
-            // List<string> listThemes = System.IO.File.Exists(TelegramBotIsSimple.Main.Projects.Theme.FileNamesTheme) ? Serializer.LoadListFromBinnary<string>(TelegramBotIsSimple.Main.Projects.Theme.FileNamesTheme) : new List<string>();
+            // List<string> listThemes = System.IO.File.Exists(BRONUF_Main.Main.Projects.Theme.FileNamesTheme) ? Serializer.LoadListFromBinnary<string>(BRONUF_Main.Main.Projects.Theme.FileNamesTheme) : new List<string>();
             List<string> allFiles = System.IO.Directory.GetFiles(theme.MainPath + $"{nameTheme}\\").ToList();
             List<string> clearList = new List<string>();
             int tmpNum, count = 0;

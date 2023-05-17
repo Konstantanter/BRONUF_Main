@@ -1,4 +1,4 @@
-﻿namespace TelegramBotIsSimple.Main.Buttons
+﻿namespace BRONUF_Main.Main.Buttons
 {
     public partial class Button
     {

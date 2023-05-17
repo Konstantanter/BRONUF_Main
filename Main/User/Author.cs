@@ -1,4 +1,4 @@
-﻿namespace TelegramBotIsSimple.Main.User
+﻿namespace BRONUF_Main.Main.User
 {
     public class Author : BaseUser
     {

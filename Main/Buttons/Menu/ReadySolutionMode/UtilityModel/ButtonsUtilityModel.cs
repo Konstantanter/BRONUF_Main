@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Telegram.Bot.Types.ReplyMarkups;
 
-namespace TelegramBotIsSimple.Main.Buttons
+namespace BRONUF_Main.Main.Buttons
 {
     public partial class Button
     {

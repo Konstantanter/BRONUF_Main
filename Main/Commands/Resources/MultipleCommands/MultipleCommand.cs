@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Data.SqlClient;
 using Telegram.Bot;
-using TelegramBotIsSimple.Main.DataBases;
+using BRONUF_Main.Main.DataBases;
 
-namespace TelegramBotIsSimple.Main.Commands.MultipleCommands
+namespace BRONUF_Main.Main.Commands.MultipleCommands
 {
     /// <summary>
     /// Класс описывающий команды 

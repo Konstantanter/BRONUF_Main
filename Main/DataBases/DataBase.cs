@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TelegramBotIsSimple.Main.DataBases
+namespace BRONUF_Main.Main.DataBases
 {
     //// <summary>
     /// Класс для управления базой данных

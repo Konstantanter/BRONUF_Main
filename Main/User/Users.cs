@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace TelegramBotIsSimple.Main.User
+namespace BRONUF_Main.Main.User
 {
     [Serializable]
     public partial class Users

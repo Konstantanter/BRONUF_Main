@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Linq;
 using System.Threading;
-using TelegramBotIsSimple.Main.Buttons;
-using TelegramBotIsSimple.Main.Commands;
-using TelegramBotIsSimple.Main.Commands.MultipleCommands;
+using BRONUF_Main.Main.Buttons;
+using BRONUF_Main.Main.Commands;
+using BRONUF_Main.Main.Commands.MultipleCommands;
 
-namespace TelegramBotIsSimple
+namespace BRONUF_Main
 {
     /// <summary>
     /// Внешний вспомогательный класс 

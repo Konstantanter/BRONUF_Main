@@ -4,7 +4,7 @@ using Telegram.Bot;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 
-namespace TelegramBotIsSimple.Main.Commands
+namespace BRONUF_Main.Main.Commands
 {
     internal class CommandsStart : Commands
     {

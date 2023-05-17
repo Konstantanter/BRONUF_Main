@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using Telegram.Bot;
-using TelegramBotIsSimple.Main.Commands.MultipleCommands;
-using TelegramBotIsSimple.Main.User;
+using BRONUF_Main.Main.Commands.MultipleCommands;
+using BRONUF_Main.Main.User;
 
-namespace TelegramBotIsSimple.Main.Projects.GenerationsDoc
+namespace BRONUF_Main.Main.Projects.GenerationsDoc
 {
     public partial class Word_Gen
     {

@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using TelegramBotIsSimple.Main.Buttons;
-using TelegramBotIsSimple.Main.Commands;
-using TelegramBotIsSimple.Main.Commands.MultipleCommands;
-using TelegramBotIsSimple.Main.DataBases;
-using TelegramBotIsSimple.Main.Projects;
+using BRONUF_Main.Main.Buttons;
+using BRONUF_Main.Main.Commands;
+using BRONUF_Main.Main.Commands.MultipleCommands;
+using BRONUF_Main.Main.DataBases;
+using BRONUF_Main.Main.Projects;
 
 
-namespace TelegramBotIsSimple
+namespace BRONUF_Main
 {
 
     /// <summary>

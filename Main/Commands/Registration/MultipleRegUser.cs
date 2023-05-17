@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Telegram.Bot;
-using TelegramBotIsSimple.Main.User;
-namespace TelegramBotIsSimple.Main.Commands.MultipleCommands
+using BRONUF_Main.Main.User;
+namespace BRONUF_Main.Main.Commands.MultipleCommands
 {
     /// <summary>
     /// Меню -> Стать со автором

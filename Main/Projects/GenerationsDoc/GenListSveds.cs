@@ -5,9 +5,9 @@ using System.Diagnostics;
 using System.Text.RegularExpressions;
 using Telegram.Bot;
 using Telegram.Bot.Types.InputFiles;
-using TelegramBotIsSimple.Main.Commands.Menu.SearchScientificPapers.GetForm16;
+using BRONUF_Main.Main.Commands.Menu.SearchScientificPapers.GetForm16;
 
-namespace TelegramBotIsSimple.Main.Projects.GenerationsDoc
+namespace BRONUF_Main.Main.Projects.GenerationsDoc
 {
     
     partial class Word_Gen

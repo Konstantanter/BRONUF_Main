@@ -1,6 +1,6 @@
 ﻿using Telegram.Bot;
 
-namespace TelegramBotIsSimple.Main.Commands
+namespace BRONUF_Main.Main.Commands
 {
     /// <summary>
     /// Класс описывающий команды 
