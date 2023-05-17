@@ -30,7 +30,7 @@ namespace TelegramBotIsSimple.Main.Commands.MultipleCommands
            
             if (System.IO.File.Exists("Users.bin"))
             {
-                usersList = Serializer.LoadListFromBinnary<Users>("Users.bin");
+                usersList = Serializer.LoadListFromXml<Users>("Users.bin");
                 if (usersList != null)
                 {
                     user = usersList.Find(a => a.ChatId.Equals(Convert.ToString(ChatId)));
@@ -71,7 +71,7 @@ namespace TelegramBotIsSimple.Main.Commands.MultipleCommands
                 usersList = null;
                 if (System.IO.File.Exists("Users.bin"))
                 {
-                    usersList = Serializer.LoadListFromBinnary<Users>("Users.bin");
+                    usersList = Serializer.LoadListFromXml<Users>("Users.bin");
                     user = usersList.Find(a => a.ChatId.Equals(Convert.ToString(ChatId)));
                 }
                 if (user != null)
@@ -79,7 +79,7 @@ namespace TelegramBotIsSimple.Main.Commands.MultipleCommands
                     int index = usersList.FindIndex(a => a.ChatId.Equals(Convert.ToString(ChatId)));
                     usersList.RemoveAt(index);
                     usersList.Add(tmpuser);
-                    Serializer.SaveListToBinnary("Users.bin", usersList);
+                    Serializer.SaveToXml("Users.bin", usersList);
                     await _client.SendTextMessageAsync(ChatId, $"Ваши данные обновлены в базе данных", replyMarkup: button.DrawBackAndStopButtons());
                 }
                 else

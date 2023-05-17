@@ -4,7 +4,7 @@ using Telegram.Bot;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 
-namespace TelegramBotIsSimple.Main.Commands.Start
+namespace TelegramBotIsSimple.Main.Commands
 {
     internal class CommandsStart : Commands
     {
@@ -45,7 +45,7 @@ namespace TelegramBotIsSimple.Main.Commands.Start
                 //}
           
         }
-        public override Commands ParentsComands { set; get; } = new CommandsMainsMenu();
+        public override Commands ParentsComands { set; get; } = null;
     }
 
     

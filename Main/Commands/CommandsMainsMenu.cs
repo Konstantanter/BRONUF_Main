@@ -21,6 +21,6 @@ namespace TelegramBotIsSimple.Main.Commands
                 await _client.SendTextMessageAsync(ChatId, "Добро пожаловать в основное меню:", replyMarkup: button.DrawChildsMenuButtons());
             
         }
-        public override Commands ParentsComands { set; get; } = null;
+        public override Commands ParentsComands { set; get; } = new CommandsStart();
     }
 }

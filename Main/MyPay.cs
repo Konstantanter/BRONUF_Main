@@ -62,8 +62,8 @@ namespace TelegramBotIsSimple.Main
         {
             string str = StatusFromBd();
             _Status = str;
-            string key = str.Equals("Test") ? "test_AnQVw3FYWfBzk8rrjUD6yIew_CLLkF3txkARA34YtHI" : "Хуй его знает";
-            client = new Yandex.Checkout.V3.Client(shopId: "838191", secretKey: key);
+            string key = str.Equals("Test") ? "test_AnQVw3FYWfBzk8rrjUD6yIew_CLLkF3txkARA34YtHI" : "live_Wd-A8uuiVwRSgcLKvPR0D3OZbunOvx3zNQ0FYSzwUKM";
+            client = new Yandex.Checkout.V3.Client(shopId: str.Equals("Test")  ? "838191" : "829964", secretKey: key);
         }
         public static async void SendWaitPay(TelegramBotClient _client,long ChatId)
         {
@@ -88,21 +88,23 @@ namespace TelegramBotIsSimple.Main
         public async void CreatePay(TelegramBotClient _client, long ChatId, Project project, TypesProgs typesProgs)
         {
             AsyncClient asyncClient = client.MakeAsync();
+            //Receipt rec = new Receipt();
+          
             // 1. Создайте платеж и получите ссылку для оплаты
             var newPayment = new NewPayment
             {
-                Amount = new Amount { Value = 3000, Currency = "RUB" },
+                Amount = new Amount { Value = 5, Currency = "RUB" },
                 Confirmation = new Confirmation
                 {
                     Type = ConfirmationType.Redirect,
                     ReturnUrl = "http://myshop.ru/thankyou"
                 },
-                Description = $"Оплата госпошлины для Пр. для ЭВМ",
+                Description = $"Оплата услуги по оформлению проекта: {project.NameProject}",
                 Capture = true,
                 Receipt = new Receipt()
                 {
-                    Email = "Почта юзера",
-                    Phone = "телефон юзера",
+                    Email = "onufriev97@mail.ru",
+                    Phone = "89601712558",
                     Items = new System.Collections.Generic.List<ReceiptItem>()
                     {
                         new ReceiptItem()
@@ -110,9 +112,9 @@ namespace TelegramBotIsSimple.Main
                             Amount = new Amount()
                             {
                                 Currency = "RUB",
-                                Value = 3000
+                                Value = 5
                             },
-                            Description = $"Оплата госпошлины Пр. для ЭВМ",
+                            Description = $"Оплата услуги оформления документов2",
                             Quantity = 1,
                             VatCode = VatCode.NoVat
                         }
@@ -132,6 +134,10 @@ namespace TelegramBotIsSimple.Main
             if (_Status.Equals("Test"))
             {
                 await _client.SendTextMessageAsync(ChatId, "Для проведения тестового платежа используйте следующие данные:\nНомер карты: <b>5555 5555 5555 4477</b>\nДата действия: <b>любая от текущей даты</b>\nCVV (код на обратной стороне): <b>любые три цифры</b>\nКод подтверждения: <b>любые три цифры</b>", Telegram.Bot.Types.Enums.ParseMode.Html, replyMarkup: null);
+            }
+            if (_Status.Equals("Fight"))
+            {
+                await _client.SendTextMessageAsync(ChatId, "Это уже не тестовый платеж!!!", Telegram.Bot.Types.Enums.ParseMode.Html, replyMarkup: null);
             }
         }
     }

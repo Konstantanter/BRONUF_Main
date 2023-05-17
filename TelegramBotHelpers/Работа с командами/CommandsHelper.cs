@@ -56,7 +56,7 @@ namespace TelegramBotIsSimple
                                 PresentCommand.Execute(_client, ChatId);
                                 PresentCommand = PresentCommand.ParentsComands;
                             }
-                            else (new CommandsMainsMenu()).Execute(_client, ChatId);
+                            else (new CommandsStart()).Execute(_client, ChatId);
                         }
                         else
                         {

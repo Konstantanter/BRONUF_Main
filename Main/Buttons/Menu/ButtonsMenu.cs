@@ -37,7 +37,9 @@ namespace TelegramBotIsSimple.Main.Buttons
                         //Меню справочной системы
                         new List<KeyboardButton>{
                             new KeyboardButton { Text = "💬 "+ ButtonsSpravSystem } },
+                      
                         },
+                      
                 //Определение перерисови клавиатуры
                 ResizeKeyboard = true
             };

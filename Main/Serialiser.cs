@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Xml;
 using System.Xml.Serialization;
 
 namespace TelegramBotIsSimple
@@ -11,16 +12,6 @@ namespace TelegramBotIsSimple
     /// </summary>
     public static class Serializer
     {
-        public static void SaveListToBinnary<T>(String FileName, List<T> SerializableObjects)
-        {
-
-            using (FileStream fs = File.Create(FileName))
-            {
-
-                BinaryFormatter formatter = new BinaryFormatter();
-                formatter.Serialize(fs, SerializableObjects);
-            }
-        }
 
         #region Сериализация и десериализация списка объектов
         public static void SaveElem<T>(String FileName, T SerializableObjects)
@@ -29,15 +20,20 @@ namespace TelegramBotIsSimple
             List<T> list = new List<T>();
             if (System.IO.File.Exists(FileName))
             {
-                list = LoadListFromBinnary<T>(FileName);
+                list = LoadListFromXml<T>(FileName);
 
+            }
+            else
+            {
+                //System.IO.Directory.CreateDirectory(System.IO.)
             }
             using (FileStream fs = File.Open(FileName, FileMode.OpenOrCreate))
             {
                 list.Add(SerializableObjects);
-                BinaryFormatter formatter = new BinaryFormatter();
 
+                XmlSerializer formatter = new XmlSerializer(typeof(List<T>));
                 formatter.Serialize(fs, list);
+
             }
 
         }
@@ -50,26 +46,17 @@ namespace TelegramBotIsSimple
                 serializer.Serialize(textWriter, SerializableObject);
             }
         }
-
-        public static T LoadFromXml<T>(String FileName)
-        {
-            XmlSerializer serializer = new XmlSerializer(typeof(T));
-            using (TextReader textReader = new StreamReader(FileName))
-            {
-                return (T)serializer.Deserialize(textReader);
-            }
-        }
-        //====================================================================
-        public static List<T> LoadListFromBinnary<T>(String FileName)
+        public static List<T> LoadListFromXml<T>(string fileName)
         {
             try
             {
-                if (System.IO.File.Exists(FileName))
+                if (System.IO.File.Exists(fileName))
                 {
-                    using (FileStream fs = File.Open(FileName, FileMode.Open))
+                    XmlSerializer ser = new XmlSerializer(typeof(List<T>));
+
+                    using (XmlReader reader = XmlReader.Create(fileName))
                     {
-                        BinaryFormatter formatter = new BinaryFormatter();
-                        return (List<T>)formatter.Deserialize(fs);
+                        return (List<T>)ser.Deserialize(reader);
                     }
                 }
 
@@ -80,7 +67,6 @@ namespace TelegramBotIsSimple
             }
             return null;
         }
-        //====================================================================
 
         #endregion
     }

@@ -28,6 +28,8 @@ namespace TelegramBotIsSimple.Main.Buttons
                         //Режим поиска научных трудов
                         new List<KeyboardButton>{
                             new KeyboardButton { Text = "🔎 "+ ButtonsSearchScientificPapers } },
+                        new List<KeyboardButton>{
+                            new KeyboardButton { Text = ButtonsBack } },
                         },
                 ResizeKeyboard = true
             };

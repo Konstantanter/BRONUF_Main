@@ -102,7 +102,7 @@ namespace TelegramBotIsSimple.Main.Projects
         public void UpdateProjects()
         {
             fileNames = new List<string>();
-            listThemes = System.IO.File.Exists(theme.FileNamesTheme) ? Serializer.LoadListFromBinnary<string>(theme.FileNamesTheme) : new List<string>();
+            listThemes = System.IO.File.Exists(theme.FileNamesTheme) ? Serializer.LoadListFromXml<string>(theme.FileNamesTheme) : new List<string>();
             var clearList = new List<Project>();
             if (listThemes.Count != 0)
             {

@@ -13,7 +13,7 @@ namespace TelegramBotIsSimple.Main.Buttons
         public IReplyMarkup DrawAllThemes(TypesProgs progs)
         {
             //Определяем список в котором будут все текущие темы
-            List<string> listTheme = Serializer.LoadListFromBinnary<string>(new Theme(progs).FileNamesTheme);
+            List<string> listTheme = Serializer.LoadListFromXml<string>(new Theme(progs).FileNamesTheme);
             //Определяем список для отрисовки наших тем
             var listThemeButtons = new List<List<KeyboardButton>>();
             if (listTheme != null && listTheme.Count != 0)

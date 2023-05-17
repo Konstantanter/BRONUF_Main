@@ -10,7 +10,7 @@ namespace TelegramBotIsSimple.Main.User
     {
         public string GetrandomAdress()
         {
-            List<string> allfiles = System.IO.Directory.GetFiles(GeneralData.NameAdress + "\\All.txt").ToList();
+            List<string> allfiles = System.IO.Directory.GetFiles(GeneralData.NameAdress).ToList();
 
             Random rand = new Random();
             string rand_file = allfiles[rand.Next(0, allfiles.Count - 1)];

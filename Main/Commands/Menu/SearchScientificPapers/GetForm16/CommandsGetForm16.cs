@@ -31,7 +31,7 @@ namespace TelegramBotIsSimple.Main.Commands.Menu.SearchScientificPapers.GetForm1
             if (System.IO.File.Exists("Users.bin"))
             {
                 //Инициализируем список пользователей
-                usersList = Serializer.LoadListFromBinnary<Users>("Users.bin");
+                usersList = Serializer.LoadListFromXml<Users>("Users.bin");
                 //Если он не пуст 
                 if (usersList != null)
                 {

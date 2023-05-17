@@ -11,7 +11,7 @@ namespace TelegramBotIsSimple.Main.Projects
         public ServiceCreatedPatentEVM()
         {
             theme = new Theme(TypesProgs.PatentEVM);
-            listThemes = System.IO.File.Exists(theme.FileNamesTheme) ? Serializer.LoadListFromBinnary<string>(theme.FileNamesTheme) : new List<string>();
+            listThemes = System.IO.File.Exists(theme.FileNamesTheme) ? Serializer.LoadListFromXml<string>(theme.FileNamesTheme) : new List<string>();
 
             ListProjects = new List<Project>();
             if (listThemes.Count != 0)

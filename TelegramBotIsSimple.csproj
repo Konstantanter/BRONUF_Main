@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F44AF185-22C3-4D53-A3B7-8F6207BE701F}</ProjectGuid>
+    <ProjectGuid>{A6654CC2-0758-4EB4-849F-55D6EE228E3C}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>TelegramBotIsSimple</RootNamespace>
     <AssemblyName>TelegramBotIsSimple</AssemblyName>

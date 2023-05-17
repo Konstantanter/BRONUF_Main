@@ -60,7 +60,7 @@ namespace TelegramBotIsSimple.Main.Commands.MultipleCommands
                 if (System.IO.File.Exists("Users.bin"))
                 {
                     //Загружаем список пользователей
-                    usersList = Serializer.LoadListFromBinnary<Users>("Users.bin");
+                    usersList = Serializer.LoadListFromXml<Users>("Users.bin");
                     //Пытаемся найти текущего пользователя по ID-у чата
                     user = usersList.Find(a => a.ChatId.Equals(Convert.ToString(ChatId)));
                 }
@@ -225,7 +225,7 @@ namespace TelegramBotIsSimple.Main.Commands.MultipleCommands
                 //Список проектоа
                 Listprojects = CreatedProject.GetListProject();
                 //Список тем
-                List<string> listTheme = Serializer.LoadListFromBinnary<string>(Projects.Theme.FileNamesThemeBD);
+                List<string> listTheme = Serializer.LoadListFromXml<string>(Projects.Theme.FileNamesThemeBD);
                 //Если список команд содердит выбраннуб тему (для фильтрации от идиотов)
                 if (listTheme.Contains(nameCommand))
                 {
@@ -287,7 +287,7 @@ namespace TelegramBotIsSimple.Main.Commands.MultipleCommands
             if (System.IO.File.Exists("Users.bin"))
             {
                 //Загружаем список пользователей
-                usersList = Serializer.LoadListFromBinnary<Users>("Users.bin");
+                usersList = Serializer.LoadListFromXml<Users>("Users.bin");
                 //Если список не пуст (а поверь мне мой друг такое может быть)
                 if (usersList != null)
                 {
