@@ -5,10 +5,13 @@ using System.Threading.Tasks;
 using Telegram.Bot;
 using BRONUF_Main.Main.Buttons;
 using BRONUF_Main.Main.Projects;
-using BRONUF_Main.Main.User;
+
 using BRONUF_Main.Properties;
 using BRONUF_Main.Main.Commands.Menu.PatentEVM;
 using BRONUF_Main.Main.Commands.Menu.IndividualProject;
+using BRONUF_Library.Projects;
+using BRONUF_Library.User;
+using BRONUF_Library;
 
 namespace BRONUF_Main.Main.Commands.MultipleCommands
 {
@@ -128,7 +131,7 @@ namespace BRONUF_Main.Main.Commands.MultipleCommands
                 System.IO.File.Delete(projetc.FileName);
             }
             //Получаем список проектов которые имеются в текущей теме
-            List<string> allFiles = System.IO.Directory.GetFiles(System.IO.Path.GetDirectoryName(BRONUF_Main.Main.Projects.Theme.FileNamesThemeEVM) + $"\\{projetc.NameTheme}\\").ToList();
+            List<string> allFiles = System.IO.Directory.GetFiles(System.IO.Path.GetDirectoryName(Theme.FileNamesThemeEVM) + $"\\{projetc.NameTheme}\\").ToList();
             //Также потребуется вспомогательный класс для обработки файлов проектов           
             List<FilesHelper> listFileHelper = new List<FilesHelper>();
             //Добавим все файлы в наш вспомогательный класс
@@ -218,7 +221,7 @@ namespace BRONUF_Main.Main.Commands.MultipleCommands
                 //Список проектоа
                 Listprojects = CreatedProject.GetListProject();
                 //Список тем
-                List<string> listTheme = Serializer.LoadListFromXml<string>(Projects.Theme.FileNamesThemeEVM);
+                List<string> listTheme = Serializer.LoadListFromXml<string>(Theme.FileNamesThemeEVM);
                 //Если список команд содердит выбраннуб тему (для фильтрации от идиотов)
                 if (listTheme.Contains(nameCommand))
                 {

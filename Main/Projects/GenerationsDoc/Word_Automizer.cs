@@ -1,11 +1,9 @@
-﻿using Microsoft.Office.Interop.Word;
+﻿using BRONUF_Library;
+using Microsoft.Office.Interop.Word;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
-using Telegram.Bot;
-using BRONUF_Main.Main.Commands.MultipleCommands;
-using BRONUF_Main.Main.User;
+
 
 namespace BRONUF_Main.Main.Projects.GenerationsDoc
 {

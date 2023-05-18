@@ -1,7 +1,6 @@
-﻿using System;
+﻿using BRONUF_Library;
+using System;
 using System.Text;
-using BRONUF_Main.Main;
-using BRONUF_Main.Main.User;
 
 namespace BRONUF_Main
 {
@@ -20,7 +19,7 @@ namespace BRONUF_Main
 
             
                 //Создаём необходимые директории при запуске
-                BRONUF_Main.Main.GeneralData genetal = new GeneralData();
+                GeneralData genetal = new GeneralData();
                 //протокол безопасного соединения
                 System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
                 //Вызов вспомогательного класса

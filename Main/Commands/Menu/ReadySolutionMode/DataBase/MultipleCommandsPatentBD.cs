@@ -5,12 +5,13 @@ using System.Threading.Tasks;
 using Telegram.Bot;
 using BRONUF_Main.Main.Buttons;
 using BRONUF_Main.Main.Projects;
-using BRONUF_Main.Main.User;
+
 using BRONUF_Main.Properties;
 using BRONUF_Main.Main.Commands.Menu.IndividualProject;
 using BRONUF_Main.Main.Commands.Menu.PatentEVM;
-using BRONUF_Main.Main.DataBases;
-using System.Data.SqlClient;
+using BRONUF_Library.Projects;
+using BRONUF_Library;
+using BRONUF_Library.User;
 
 namespace BRONUF_Main.Main.Commands.MultipleCommands
 
@@ -132,7 +133,7 @@ namespace BRONUF_Main.Main.Commands.MultipleCommands
                 System.IO.File.Delete(projetc.FileName);
             }
             //Получаем список проектов которые имеются в текущей теме
-            List<string> allFiles = System.IO.Directory.GetFiles(System.IO.Path.GetDirectoryName(BRONUF_Main.Main.Projects.Theme.FileNamesThemeBD) + $"\\{projetc.NameTheme}\\").ToList();
+            List<string> allFiles = System.IO.Directory.GetFiles(System.IO.Path.GetDirectoryName(Theme.FileNamesThemeBD) + $"\\{projetc.NameTheme}\\").ToList();
             //Также потребуется вспомогательный класс для обработки файлов проектов           
             List<FilesHelper> listFileHelper = new List<FilesHelper>();
             //Добавим все файлы в наш вспомогательный класс
@@ -225,14 +226,14 @@ namespace BRONUF_Main.Main.Commands.MultipleCommands
                 //Список проектоа
                 Listprojects = CreatedProject.GetListProject();
                 //Список тем
-                List<string> listTheme = Serializer.LoadListFromXml<string>(Projects.Theme.FileNamesThemeBD);
+                List<string> listTheme = Serializer.LoadListFromXml<string>(Theme.FileNamesThemeBD);
                 //Если список команд содердит выбраннуб тему (для фильтрации от идиотов)
                 if (listTheme.Contains(nameCommand))
                 {
                     //Отсылаем сообщение о выбранной теме
                     await _client.SendTextMessageAsync(ChatId, $"Выбранная тема: \"{nameCommand}\"", replyMarkup: null);
                     //Объявляем новую тему
-                    Projects.Theme newTheme = new Projects.Theme(nameCommand,TypesProgs.DataBase);
+                    Theme newTheme = new Theme(nameCommand,TypesProgs.DataBase);
                     //Получаем список проектов в теме
                     List<Project> newList = Listprojects.Where(a => a.NameTheme.Equals(nameCommand)).ToList();
                     //Вспомогательная переменная для нумерации

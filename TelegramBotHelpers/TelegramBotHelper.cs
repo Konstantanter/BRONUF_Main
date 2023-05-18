@@ -7,6 +7,8 @@ using Telegram.Bot.Types.Enums;
 using BRONUF_Main.Main;
 using BRONUF_Main.Main.Commands.MultipleCommands;
 using BRONUF_Main.Main.Projects;
+using BRONUF_Library;
+using BRONUF_Library.Projects;
 
 namespace BRONUF_Main
 {

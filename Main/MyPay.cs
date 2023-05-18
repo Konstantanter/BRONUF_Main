@@ -2,9 +2,9 @@
 using System.Data.SqlClient;
 using Telegram.Bot;
 using Telegram.Bot.Types.ReplyMarkups;
-using BRONUF_Main.Main.DataBases;
-using BRONUF_Main.Main.Projects;
 using Yandex.Checkout.V3;
+using BRONUF_Library.Projects;
+using BRONUF_Library;
 
 namespace BRONUF_Main.Main
 {

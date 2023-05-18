@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Diagnostics;
-using System.Globalization;
-using System.IO;
+
 using System.Threading.Tasks;
 using Telegram.Bot;
 using BRONUF_Main.Main.Commands.Menu.SearchScientificPapers.GetForm16;
-using BRONUF_Main.Main.DataBases;
 using BRONUF_Main.Main.Projects.GenerationsDoc;
-using BRONUF_Main.Main.User;
+using BRONUF_Library;
 
 namespace BRONUF_Main.Main.Commands.Menu.UserFindProject
 {

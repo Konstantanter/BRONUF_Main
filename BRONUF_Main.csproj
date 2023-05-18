@@ -93,7 +93,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassMainEnums.cs" />
     <Compile Include="Main\Buttons\ButtonGetAllTheme.cs" />
     <Compile Include="Main\Buttons\ButtonStop.cs" />
     <Compile Include="Main\Buttons\Menu\ButtonsMenu.cs" />
@@ -150,11 +149,9 @@
     <Compile Include="Main\Commands\Menu\SearchScientificPapers\GetForm16\ProjectListHelper.cs" />
     <Compile Include="Main\Commands\Registration\MultipleRegUser.cs" />
     <Compile Include="Main\Commands\Resources\Start\CommandsStart.cs" />
-    <Compile Include="Main\DataBases\DataBase.cs" />
     <Compile Include="Main\Projects\GenerationsDoc\GenListSveds.cs" />
     <Compile Include="Main\Projects\ServiceCreatedPatentBD.cs" />
     <Compile Include="Main\Projects\ServiceCreatedPatentEVM.cs" />
-    <Compile Include="Main\User\Adress\CityHelper.cs" />
     <Compile Include="TelegramBotHelpers\InitialData\InitialDataHelper.cs" />
     <Compile Include="TelegramBotHelpers\MultipleCommandHelper\MultipleCommand.cs" />
     <Compile Include="Main\Commands\Menu\ReadySolutionMode\PatentEVM\MultipleCommandsPatentEVM.cs" />
@@ -163,19 +160,9 @@
     <Compile Include="Main\Commands\Resources\Back\CommandsBack.cs" />
     <Compile Include="Main\Commands\Resources\MultipleCommands\MultipleCommand.cs" />
     <Compile Include="Main\Commands\Commands.cs" />
-    <Compile Include="Main\GeneralData.cs" />
     <Compile Include="Main\MyPay.cs" />
     <Compile Include="Main\Projects\GenerationsDoc\Word_Automizer.cs" />
-    <Compile Include="Main\Projects\Project.cs" />
     <Compile Include="Main\Projects\ServiceCreatedProject.cs" />
-    <Compile Include="Main\Projects\Theme.cs" />
-    <Compile Include="Main\Serialiser.cs" />
-    <Compile Include="Main\User\Author.cs" />
-    <Compile Include="Main\User\BaseUser.cs" />
-    <Compile Include="Main\User\KemVyd\ListKemVyd.cs" />
-    <Compile Include="Main\User\Pravo.cs" />
-    <Compile Include="Main\User\Users.cs" />
-    <Compile Include="Main\User\Vklad\ListVklad.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -229,6 +216,12 @@
     <Folder Include="Main\Commands\SpravSystem\ScientificPapers\" />
     <Folder Include="Main\Commands\SpravSystem\Support\" />
     <Folder Include="Main\Commands\SpravSystem\UniversitiesAndOrganizations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BRONUF_Library\BRONUF_Library\BRONUF_Library.csproj">
+      <Project>{6e15134a-8fc0-4661-944c-068920204351}</Project>
+      <Name>BRONUF_Library</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

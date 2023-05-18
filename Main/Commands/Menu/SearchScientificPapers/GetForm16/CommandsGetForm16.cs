@@ -4,7 +4,8 @@ using System.Text;
 using Telegram.Bot;
 using Telegram.Bot.Types.InputFiles;
 using BRONUF_Main.Main.Commands.Menu.UserFindProject;
-using BRONUF_Main.Main.User;
+using BRONUF_Library.User;
+using BRONUF_Library;
 
 namespace BRONUF_Main.Main.Commands.Menu.SearchScientificPapers.GetForm16
 {
