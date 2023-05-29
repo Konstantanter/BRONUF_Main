@@ -103,8 +103,7 @@ namespace BRONUF_Main.Main
                 Capture = true,
                 Receipt = new Receipt()
                 {
-                    Email = "onufriev97@mail.ru",
-                    Phone = "89601712558",
+
                     Items = new System.Collections.Generic.List<ReceiptItem>()
                     {
                         new ReceiptItem()
@@ -121,6 +120,8 @@ namespace BRONUF_Main.Main
                     }
                 }
             };
+            Receipt rec = new Receipt();
+           
             Payment payment = client.CreatePayment(newPayment);
             // 2. Перенаправьте пользователя на страницу оплаты
             string url = payment.Confirmation.ConfirmationUrl;

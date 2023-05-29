@@ -88,8 +88,8 @@
     <Reference Include="Telegram.Bot, Version=16.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Telegram.Bot.16.0.0\lib\net45\Telegram.Bot.dll</HintPath>
     </Reference>
-    <Reference Include="Yandex.Checkout.V3, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Yandex.Checkout.V3.1.4.0\lib\net45\Yandex.Checkout.V3.dll</HintPath>
+    <Reference Include="Yandex.Checkout.V3, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Yandex.Checkout.V3.1.7.0\lib\net45\Yandex.Checkout.V3.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
