@@ -94,7 +94,7 @@ namespace BRONUF_Main.Main.Commands.MultipleCommands
                     //Регистрируем текущего пользователя на наш проект
                     project.ListUsers.Add(user);
                     //Проверяем достигло ли число пользователей флага укомплектованности
-                    if (project.ListUsers.Count() == MultipleCommandsPatentBD.countUserInProject)
+                    if (project.ListUsers.Count() == countUserInProject)
                     {
                         //Создаем директорию 
                         System.IO.Directory.CreateDirectory(project.MainPath);
@@ -198,7 +198,7 @@ namespace BRONUF_Main.Main.Commands.MultipleCommands
         /// <summary>
         /// Имя комманды
         /// </summary>
-        public override System.String Name { set; get; } = Buttons.Button.ButtonsDataBase;
+        public override System.String Name { set; get; } = Button.ButtonsDataBase;
 
         /// <summary>
         /// Списко действий которые должны выполниться при вызове команды

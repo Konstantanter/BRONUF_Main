@@ -15,7 +15,7 @@ namespace BRONUF_Main.Main.Projects.GenerationsDoc
         public bool GenAndSendListSveds(List<int> CurrentList, List<ProjectHelper> projectHelpers, int CountSved, string NameUser, TelegramBotClient _client, long ChatId)
         {
 
-            object ФорматСтроки = Microsoft.Office.Interop.Word.WdUnits.wdLine;
+            object ФорматСтроки = WdUnits.wdLine;
             //object СмещениеКурсора;
             var t = Type.Missing; //значение по умолчанию
             Microsoft.Office.Interop.Word.Application WORD = new Microsoft.Office.Interop.Word.Application();
@@ -51,7 +51,7 @@ namespace BRONUF_Main.Main.Projects.GenerationsDoc
             Table table = WORD.ActiveDocument.Tables.Add(wrdRng, rows, 4, ПоказыватьГраницы, РегулирШирины);
 
             wrdRng = WORD.ActiveDocument.Tables[1].Cell(1, 1).Range;
-            wrdRng.Cells.VerticalAlignment = Microsoft.Office.Interop.Word.WdCellVerticalAlignment.wdCellAlignVerticalCenter;
+            wrdRng.Cells.VerticalAlignment = WdCellVerticalAlignment.wdCellAlignVerticalCenter;
 
             wrdRng.Text = "№ п/п";
 
@@ -65,16 +65,16 @@ namespace BRONUF_Main.Main.Projects.GenerationsDoc
             for (int i = 2; i <= rows; i++)
             {
                 wrdRng = WORD.ActiveDocument.Tables[1].Cell(i, 1).Range;
-                wrdRng.Cells.VerticalAlignment = Microsoft.Office.Interop.Word.WdCellVerticalAlignment.wdCellAlignVerticalCenter;
+                wrdRng.Cells.VerticalAlignment = WdCellVerticalAlignment.wdCellAlignVerticalCenter;
                 wrdRng.Text = Convert.ToString(i-1);
                 wrdRng = WORD.ActiveDocument.Tables[1].Cell(i, 2).Range;
-                wrdRng.Cells.VerticalAlignment = Microsoft.Office.Interop.Word.WdCellVerticalAlignment.wdCellAlignVerticalCenter;
+                wrdRng.Cells.VerticalAlignment = WdCellVerticalAlignment.wdCellAlignVerticalCenter;
                 wrdRng.Text = projectHelpers[i-2].registration_number;
                 wrdRng = WORD.ActiveDocument.Tables[1].Cell(i, 3).Range;
-                wrdRng.Cells.VerticalAlignment = Microsoft.Office.Interop.Word.WdCellVerticalAlignment.wdCellAlignVerticalCenter;
+                wrdRng.Cells.VerticalAlignment = WdCellVerticalAlignment.wdCellAlignVerticalCenter;
                 wrdRng.Text = String.Format("{0}\n\"{1}\"", projectHelpers[i - 2].typesProject,projectHelpers[i-2].program_name);
                 wrdRng = WORD.ActiveDocument.Tables[1].Cell(i, 4).Range;
-                wrdRng.Cells.VerticalAlignment = Microsoft.Office.Interop.Word.WdCellVerticalAlignment.wdCellAlignVerticalCenter;
+                wrdRng.Cells.VerticalAlignment = WdCellVerticalAlignment.wdCellAlignVerticalCenter;
                 wrdRng.Text = extractDate(projectHelpers[i-2].registration_publish_date).ToShortDateString() +" г.";
             }
             string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\SKYNET3\\Project\\Temp\\";

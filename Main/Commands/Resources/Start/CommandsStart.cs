@@ -41,7 +41,7 @@ namespace BRONUF_Main.Main.Commands
 
                     var button = new Buttons.Button();
                     //await _client.SendTextMessageAsync(-1001761399974, "S");
-                    await _client.SendTextMessageAsync(ChatId, "Добро пожаловать в <b>KOBRA Lab</b>\n\n<b>Perge ad cognitionem et scientiam rerum gestarum!</b>\n\nВсе права защищены", Telegram.Bot.Types.Enums.ParseMode.Html, replyMarkup: button.DrawMainsMenuButtons());
+                    await _client.SendTextMessageAsync(ChatId, "Добро пожаловать в <b>KOBRA Lab</b>\n\n<b>Perge ad cognitionem et scientiam rerum gestarum!</b>\n\nВсе права защищены", ParseMode.Html, replyMarkup: button.DrawMainsMenuButtons());
                 //}
           
         }
