@@ -13,7 +13,7 @@ namespace BRONUF_Main.Main.Buttons
         /// Функция отрисовки дочернего меню
         /// </summary>
         /// <returns></returns>
-        public IReplyMarkup DrawChildsMenuButtons()
+        public IReplyMarkup DrawMainChildsMenuButtons()
         {
             return new ReplyKeyboardMarkup
             {

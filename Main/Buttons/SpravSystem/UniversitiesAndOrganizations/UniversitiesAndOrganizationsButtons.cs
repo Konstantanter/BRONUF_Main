@@ -5,6 +5,6 @@
         /// <summary>
         /// Кнопка ВУзам и научным организациям
         /// </summary>
-        public const string ButtonsUniversitiesAndOrganizations = "Вузам и научным организациям";
+        public const string ButtonsUniversitiesAndOrganizations = "📖 Вузам и научным организациям";
     }
 }

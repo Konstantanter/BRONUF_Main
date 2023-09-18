@@ -5,6 +5,6 @@
         /// <summary>
         /// Кнопка информации о научных трудах
         /// </summary>
-        public const string ButtonsScientificPapersHelp = "Научные труды: что и для чего?";
+        public const string ButtonsScientificPapersHelp = "ℹ️ Научные труды: что и для чего?";
     }
 }

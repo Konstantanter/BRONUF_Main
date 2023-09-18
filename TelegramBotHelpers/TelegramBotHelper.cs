@@ -1,18 +1,16 @@
-﻿using System;
+﻿using BRONUF_Library;
+using BRONUF_Library.Projects;
+using BRONUF_Main.Main;
+using BRONUF_Main.Main.Commands.MultipleCommands;
+using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
-using BRONUF_Main.Main;
-using BRONUF_Main.Main.Commands.MultipleCommands;
-using BRONUF_Main.Main.Projects;
-using BRONUF_Library;
-using BRONUF_Library.Projects;
 
 namespace BRONUF_Main
 {
-
     /// <summary>
     /// Внешний вспомогательный класс 
     /// </summary>
@@ -29,7 +27,6 @@ namespace BRONUF_Main
                     int offset = 0;
                     while (true)
                     {
-
                         var updates = _client.GetUpdatesAsync(offset).Result;
                         if (updates != null && updates.Count() > 0)
                         {
@@ -39,8 +36,6 @@ namespace BRONUF_Main
                                 offset = update.Id + 1;
                             }
                         }
-
-
                         Thread.Sleep(1000);
                     }
                 }
@@ -48,7 +43,7 @@ namespace BRONUF_Main
             catch (Exception)
             {
 
-           }
+            }
         }
         private async void processUpdate(Update update)
         {
@@ -58,10 +53,10 @@ namespace BRONUF_Main
                 {
 
                     case UpdateType.Message:
-                        
+
                         long id1 = update.Message.Chat.Id;
                         string state = _clientStates.ContainsKey(update.Message.Chat.Id) ? _clientStates[update.Message.Chat.Id] : (string)null;
-                     
+
                         if (update.Message.Type == MessageType.Text)
                         {
 
@@ -138,14 +133,14 @@ namespace BRONUF_Main
                             MyPay.SendWaitPay(_client, ChatId);
                             break;
                         }
-                        if (text1.Contains(GeneralData.TmpProgrammName +" №"))
+                        if (text1.Contains(GeneralData.TmpProgrammName + " №"))
                         {
                             //createdPatentEVM = new ServiceCreatedPatentEVM();
                             new MultipleCommandsPatentEVM(createdPatentEVM).RegAuthor(update.CallbackQuery.Message.Text, _client, ChatId);
                         }
-                        if (text1.Contains(GeneralData.TmpBDName +" №"))
+                        if (text1.Contains(GeneralData.TmpBDName + " №"))
                         {
-                           // createdPatentBD = new ServiceCreatedPatentBD();
+                            // createdPatentBD = new ServiceCreatedPatentBD();
                             new MultipleCommandsPatentBD(createdPatentBD).RegAuthor(update.CallbackQuery.Message.Text, _client, ChatId);
                         }
                         break;
@@ -163,7 +158,7 @@ namespace BRONUF_Main
             });
         }
 
-     
+
     }
 
 

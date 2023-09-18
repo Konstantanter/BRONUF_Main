@@ -55,11 +55,14 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
-      <HintPath>packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
-    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
-      <HintPath>packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.3.2.10, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.3.2\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -67,16 +70,19 @@
       <HintPath>..\..\..\Skynet\Microsoft.Office.Interop.Word.dll</HintPath>
     </Reference>
     <Reference Include="MihaZupan.HttpToSocks5Proxy, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\HttpToSocks5Proxy.1.4.0\lib\net45\MihaZupan.HttpToSocks5Proxy.dll</HintPath>
+      <HintPath>..\packages\HttpToSocks5Proxy.1.4.0\lib\net45\MihaZupan.HttpToSocks5Proxy.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.0\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
@@ -86,7 +92,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="Telegram.Bot, Version=16.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Telegram.Bot.16.0.0\lib\net45\Telegram.Bot.dll</HintPath>
+      <HintPath>..\packages\Telegram.Bot.16.0.0\lib\net45\Telegram.Bot.dll</HintPath>
     </Reference>
     <Reference Include="Yandex.Checkout.V3, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Yandex.Checkout.V3.1.7.0\lib\net45\Yandex.Checkout.V3.dll</HintPath>
@@ -95,8 +101,8 @@
   <ItemGroup>
     <Compile Include="Main\Buttons\ButtonGetAllTheme.cs" />
     <Compile Include="Main\Buttons\ButtonStop.cs" />
-    <Compile Include="Main\Buttons\Menu\ButtonsMenu.cs" />
-    <Compile Include="Main\Buttons\Menu\ChildMenu.cs" />
+    <Compile Include="Main\Buttons\Menu\ButtonsMainMenu.cs" />
+    <Compile Include="Main\Buttons\Menu\ButtonsMainChildMenu.cs" />
     <Compile Include="Main\Buttons\Menu\IndividualProject\ApplicationDataBase\ButtonsApplicationDataBase.cs" />
     <Compile Include="Main\Buttons\Menu\IndividualProject\ApplicationForInvention\ButtonsApplicationInvention.cs" />
     <Compile Include="Main\Buttons\Menu\IndividualProject\ApplicationProgramm\ButtonsApplicationProgramm.cs" />
@@ -119,9 +125,10 @@
     <Compile Include="Main\Buttons\Menu\SearchScientificPapers\SearchScientificPapersMenu.cs" />
     <Compile Include="Main\Buttons\Menu\SearchScientificPapers\SearchUtilityInvencion\ButtonsSearchUtilityInvencion.cs" />
     <Compile Include="Main\Buttons\Registrarion\ButtonsRegistration.cs" />
+    <Compile Include="Main\Buttons\SpravSystem\ButtonsSpravSystem.cs" />
     <Compile Include="Main\Buttons\SpravSystem\Instruction\ButtonsInstruction.cs" />
     <Compile Include="Main\Buttons\SpravSystem\ScientificPapers\ButtonsScientificPapersHelp.cs" />
-    <Compile Include="Main\Buttons\SpravSystem\SpravSystemMenu.cs" />
+    <Compile Include="Main\Buttons\SpravSystem\ButtonsSpravSystemMenu.cs" />
     <Compile Include="Main\Buttons\SpravSystem\Support\ButtonsSupport.cs" />
     <Compile Include="Main\Buttons\SpravSystem\UniversitiesAndOrganizations\UniversitiesAndOrganizationsButtons.cs" />
     <Compile Include="Main\Commands\CommandsMainsMenu.cs" />
@@ -149,6 +156,9 @@
     <Compile Include="Main\Commands\Menu\SearchScientificPapers\GetForm16\ProjectListHelper.cs" />
     <Compile Include="Main\Commands\Registration\MultipleRegUser.cs" />
     <Compile Include="Main\Commands\Resources\Start\CommandsStart.cs" />
+    <Compile Include="Main\Commands\SpravSystem\CommandsSpravSystemMenu.cs" />
+    <Compile Include="Main\Commands\SpravSystem\Instruction\CommandsInstruction.cs" />
+    <Compile Include="Main\Commands\SpravSystem\Support\CommandsSupport.cs" />
     <Compile Include="Main\Projects\GenerationsDoc\GenListSveds.cs" />
     <Compile Include="Main\Projects\ServiceCreatedPatentBD.cs" />
     <Compile Include="Main\Projects\ServiceCreatedPatentEVM.cs" />
@@ -212,9 +222,7 @@
     <Folder Include="Main\Buttons\Menu\SearchScientificPapers\GetApplication\" />
     <Folder Include="Main\Buttons\SpravSystem\AboutBRONUF\" />
     <Folder Include="Main\Commands\SpravSystem\AboutBRONUF\" />
-    <Folder Include="Main\Commands\SpravSystem\Instruction\" />
     <Folder Include="Main\Commands\SpravSystem\ScientificPapers\" />
-    <Folder Include="Main\Commands\SpravSystem\Support\" />
     <Folder Include="Main\Commands\SpravSystem\UniversitiesAndOrganizations\" />
   </ItemGroup>
   <ItemGroup>

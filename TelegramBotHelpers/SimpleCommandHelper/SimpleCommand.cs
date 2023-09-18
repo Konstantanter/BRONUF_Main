@@ -50,8 +50,9 @@ namespace BRONUF_Main
 
             new CommandsChildMenu(),
 
+            new CommandSpravSystemMenu(),
 
-
+            new CommandsSupport(),
 
             new CommandsBack()
            

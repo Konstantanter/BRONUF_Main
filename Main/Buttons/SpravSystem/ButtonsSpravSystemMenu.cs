@@ -7,10 +7,10 @@ namespace BRONUF_Main.Main.Buttons
     {
 
         /// <summary>
-        /// Отрисовка кнопок раздела "Поддержка"
+        /// Отрисовка кнопок раздела "Справочная система"
         /// </summary>
-        /// <returns>Клавиатура раздела поддержка</returns>
-        public IReplyMarkup DrawSpravMenu()
+        /// <returns>Клавиатура раздела Справочная система</returns>
+        public IReplyMarkup DrawSpravSystemMenu()
         {
             //Возвращаем отрисованную клавиатуру
             return new ReplyKeyboardMarkup
@@ -20,16 +20,16 @@ namespace BRONUF_Main.Main.Buttons
                         {
                         //Поддержка
                         new List<KeyboardButton>{
-                            new KeyboardButton { Text = "👨‍🔧 " + ButtonsSupport}},
+                            new KeyboardButton { Text = ButtonsSupport}},
                         //Инструкция по использованию
                         new List<KeyboardButton>{
-                            new KeyboardButton { Text = "💬 " + ButtonsInstruction}},
+                            new KeyboardButton { Text = ButtonsInstruction}},
                         //Научные труды что и для чего
                         new List<KeyboardButton>{
-                            new KeyboardButton { Text = "ℹ️ " + ButtonsScientificPapersHelp}},
+                            new KeyboardButton { Text = ButtonsScientificPapersHelp}},
                         //Вузам и научным организациям
                         new List<KeyboardButton>{
-                            new KeyboardButton { Text ="📖 " + ButtonsUniversitiesAndOrganizations}},
+                            new KeyboardButton { Text = ButtonsUniversitiesAndOrganizations}},
                         //Кнопка назад
                         new List<KeyboardButton>{
                             new KeyboardButton { Text = ButtonsBack}}

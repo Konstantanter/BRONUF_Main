@@ -14,10 +14,6 @@ namespace BRONUF_Main.Main.Buttons
         /// </summary>
         public const string ButtonsMainsMenu = "Основное меню";
         /// <summary>
-        /// Кнопка справочной системы
-        /// </summary>
-        public const string ButtonsSpravSystem = "Справочная система";
-        /// <summary>
         /// Функция отрисовки основного меню
         /// </summary>
         /// <returns></returns>
@@ -36,7 +32,7 @@ namespace BRONUF_Main.Main.Buttons
                             new KeyboardButton { Text = "📝 "+ ButtonsRegistration } },
                         //Меню справочной системы
                         new List<KeyboardButton>{
-                            new KeyboardButton { Text = "💬 "+ ButtonsSpravSystem } },
+                            new KeyboardButton { Text = ButtonsSpravSystem } },
                       
                         },
                       

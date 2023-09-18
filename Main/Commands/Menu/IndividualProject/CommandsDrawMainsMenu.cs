@@ -1,6 +1,6 @@
 ﻿using Telegram.Bot;
 
-namespace BRONUF_Main.Main.Commands.Menu.IndividualProject
+namespace BRONUF_Main.Main.Commands
 {
     /// <summary>
     /// Команда "Главное меню"

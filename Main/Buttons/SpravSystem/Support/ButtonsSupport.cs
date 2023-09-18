@@ -5,6 +5,6 @@
         /// <summary>
         /// Поддержка
         /// </summary>
-        public const string ButtonsSupport = "Поддержка";
+        public const string ButtonsSupport = "👨‍🔧 Поддержка";
     }
 }
