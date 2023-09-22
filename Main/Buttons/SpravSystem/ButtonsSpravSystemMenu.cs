@@ -5,7 +5,6 @@ namespace BRONUF_Main.Main.Buttons
 {
     public partial class Button
     {
-
         /// <summary>
         /// Отрисовка кнопок раздела "Справочная система"
         /// </summary>
@@ -30,6 +29,12 @@ namespace BRONUF_Main.Main.Buttons
                         //Вузам и научным организациям
                         new List<KeyboardButton>{
                             new KeyboardButton { Text = ButtonsUniversitiesAndOrganizations}},
+                        //О Нас
+                        new List<KeyboardButton>{
+                            new KeyboardButton { Text = ButtonsAboutOur}},
+                        //О проекте
+                        new List<KeyboardButton>{
+                            new KeyboardButton { Text = ButtonsAboutBRONUF}},
                         //Кнопка назад
                         new List<KeyboardButton>{
                             new KeyboardButton { Text = ButtonsBack}}

@@ -12,7 +12,7 @@ namespace BRONUF_Main.Main.Commands.MultipleCommands
     /// </summary>
     internal class MultipleRegUser : MultipleCommand
     {
-        int countQwesh;
+       
         List<Users> usersList;
         Users user;
         public MultipleRegUser()

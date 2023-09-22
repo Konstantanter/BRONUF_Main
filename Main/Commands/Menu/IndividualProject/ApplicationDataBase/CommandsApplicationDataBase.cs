@@ -15,13 +15,13 @@ namespace BRONUF_Main.Main.Commands.Menu.IndividualProject
         /// <summary>
         /// Переопределение имени команды
         /// </summary>
-        public override System.String Name { set; get; } = Buttons.Button.ButtonsApplicationDataBase;
+        public override string Name { set; get; } = Buttons.Button.ButtonsApplicationDataBase;
         /// <summary>
         /// Переопределение исполнения команды
         /// </summary>
         public override async void Execute(TelegramBotClient _client, long ChatId)
         {
-            var button = new Buttons.Button();
+            Buttons.Button button = new Buttons.Button();
             await _client.SendTextMessageAsync(ChatId, Buttons.Button.ButtonNotDevelop, Telegram.Bot.Types.Enums.ParseMode.Html, replyMarkup: null);
         }
         public override Commands ParentsComands { set; get; } = new CommandsChildMenu();

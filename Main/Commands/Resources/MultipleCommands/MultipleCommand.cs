@@ -11,8 +11,13 @@ namespace BRONUF_Main.Main.Commands.MultipleCommands
     /// </summary>
     internal abstract class MultipleCommand
     {
+        /// <summary>
+        /// Вспомогательная переменная для подсчета числа вопросов
+        /// </summary>
+        public int countQwesh;
         public string StatusFromBd()
         {
+            
             //Задаем переменную для хранения статуса
             string ans = "";
             //Класс для подключения к базе данных

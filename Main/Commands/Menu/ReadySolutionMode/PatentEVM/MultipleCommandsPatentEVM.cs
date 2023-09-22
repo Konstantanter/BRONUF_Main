@@ -1,17 +1,16 @@
-﻿using System;
+﻿using BRONUF_Library;
+using BRONUF_Library.Projects;
+using BRONUF_Library.User;
+using BRONUF_Main.Main.Buttons;
+using BRONUF_Main.Main.Commands.Menu.IndividualProject;
+using BRONUF_Main.Main.Commands.Menu.PatentEVM;
+using BRONUF_Main.Main.Projects;
+using BRONUF_Main.Properties;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Telegram.Bot;
-using BRONUF_Main.Main.Buttons;
-using BRONUF_Main.Main.Projects;
-
-using BRONUF_Main.Properties;
-using BRONUF_Main.Main.Commands.Menu.PatentEVM;
-using BRONUF_Main.Main.Commands.Menu.IndividualProject;
-using BRONUF_Library.Projects;
-using BRONUF_Library.User;
-using BRONUF_Library;
 
 namespace BRONUF_Main.Main.Commands.MultipleCommands
 {
@@ -25,18 +24,16 @@ namespace BRONUF_Main.Main.Commands.MultipleCommands
         /// Флаг который определяет число пользователь на котором будет закрываться проект и передваться на регистрауию
         /// </summary>
         public const int countUserInProject = 1;
-        /// <summary>
-        /// Вспомогательная переменная для подсчета числа вопросов
-        /// </summary>
-        int countQwesh;
+
         /// <summary>
         /// Список проектов
         /// </summary>
-        List<Project> Listprojects;
+        private List<Project> Listprojects;
+
         /// <summary>
         /// Вспомогательный класс для генерации проектов
         /// </summary>
-        ServiceCreatedProject CreatedProject = null;
+        private readonly ServiceCreatedProject CreatedProject = null;
         #endregion
 
         /// <summary>
@@ -72,8 +69,6 @@ namespace BRONUF_Main.Main.Commands.MultipleCommands
                 }
                 else
                 {
-                    //Наверное для этих целей создать BRONUF оплата
-
                     //мой ID чата 
                     long KostetChat = Convert.ToInt64(Resources.KostetIdChat);
                     //ID Чата моего брата
@@ -98,7 +93,7 @@ namespace BRONUF_Main.Main.Commands.MultipleCommands
                         //Создаем директорию 
                         System.IO.Directory.CreateDirectory(project.MainPath);
                         //Генерируем случайное имя для проекта
-                        string path = project.MainPath+System.IO.Path.GetFileNameWithoutExtension(System.IO.Path.GetRandomFileName())+".kobra";
+                        string path = project.MainPath + System.IO.Path.GetFileNameWithoutExtension(System.IO.Path.GetRandomFileName()) + ".kobra";
                         //Сохраняем наш проект в файл
                         Serializer.SaveToXml<Project>(path, project);
                         ReplaceProject(project);
@@ -115,7 +110,6 @@ namespace BRONUF_Main.Main.Commands.MultipleCommands
             /*
              * Данный алгоритм я назвал "Если взял, то положи на место"
              */
-
             //Получаем акутальный список проектов
             Listprojects = CreatedProject.GetListProject();
             //Нам понадобится индекс проекта
@@ -123,7 +117,7 @@ namespace BRONUF_Main.Main.Commands.MultipleCommands
             //Удаляем наш проект
             Listprojects.RemoveAt(mainIndex);
             //Определяем новый список для кранения списка проектов в текущей теме 
-            var newList = Listprojects.FindAll(a => a.NameTheme.Equals(projetc.NameTheme));
+            List<Project> newList = Listprojects.FindAll(a => a.NameTheme.Equals(projetc.NameTheme));
 
             string str = StatusFromBd();
             if (!str.Equals("Test"))
@@ -138,47 +132,45 @@ namespace BRONUF_Main.Main.Commands.MultipleCommands
             foreach (string line in allFiles)
             {
                 if (line != "")
+                {
                     listFileHelper.Add(new FilesHelper(line));
+                }
             }
             ////Объявляем новый список файлов
             //var newLists = new List<FilesHelper>();
-            foreach (var fileHelpers in listFileHelper)
+            foreach (FilesHelper fileHelpers in listFileHelper)
             {
                 //Отмечаем посещёнными, все файлы тех проектов которые были ранее
-                foreach (var files in newList)
+                foreach (Project files in newList)
                 {
-
                     if (fileHelpers.PathToFile.Equals(files.FileName))
                     {
-                        
+
                         fileHelpers.Visited = true;
                     }
-
                 }
-                ////Собираем срисок файлов снова
-                //newLists.Add(fileHelpers);
             }
             //Собираем список непосещенных файлов
-            var listNotVisited = listFileHelper.FindAll(a => a.Visited == false); //Если замена не работаеттут вместо listFileHelper ставь newLists и убери комментарии в цикле
+            List<FilesHelper> listNotVisited = listFileHelper.FindAll(a => a.Visited == false); //Если замена не работаеттут вместо listFileHelper ставь newLists и убери комментарии в цикле
             //Если список не пуст
             if (listNotVisited != null)
             {
                 //Находим случайный проект из списка
-                var randProject = listNotVisited[(new Random()).Next(0, listNotVisited.Count)];
+                FilesHelper randProject = listNotVisited[(new Random()).Next(0, listNotVisited.Count)];
                 //Создаём наш проект
-                Project project = new Project(System.IO.File.ReadAllText(randProject.PathToFile));
-                //Передаём имя темы
-                project.NameTheme = System.IO.Path.GetFileName(System.IO.Path.GetDirectoryName(randProject.PathToFile));
-                //Генерируем хэндшейк
-                project.HandShake = System.IO.Path.GetFileNameWithoutExtension(System.IO.Path.GetRandomFileName());
-                //Передавем имя файла
-                project.FileName = randProject.PathToFile;
+                Project project = new Project(System.IO.File.ReadAllText(randProject.PathToFile))
+                {
+                    //Передаём имя темы
+                    NameTheme = System.IO.Path.GetFileName(System.IO.Path.GetDirectoryName(randProject.PathToFile)),
+                    //Генерируем хэндшейк
+                    HandShake = System.IO.Path.GetFileNameWithoutExtension(System.IO.Path.GetRandomFileName()),
+                    //Передавем имя файла
+                    FileName = randProject.PathToFile
+                };
                 //Вставляем новый проект вместо старого
                 Listprojects.Insert(mainIndex, project);
             }
-
         }
-    
         /// <summary>
         /// Команда "Соавторство: патент на ПрЭВМ"
         /// </summary>
@@ -186,22 +178,22 @@ namespace BRONUF_Main.Main.Commands.MultipleCommands
         {
             //Передаём сервис для генерации проектов
             CreatedProject = createdProjects;
-           
+
             //Обнуляем счётчик текущего вопроса
             countQwesh = 0;
         }
         /// <summary>
         /// Имя комманды
         /// </summary>
-        public override System.String Name { set; get; } = Button.ButtonsPatentntEVM;
+        public override string Name { set; get; } = Button.ButtonsPatentntEVM;
 
         /// <summary>
         /// Списко действий которые должны выполниться при вызове команды
         /// </summary>
         public override async void Execute(TelegramBotClient _client, long ChatId)
         {
-                var button = new Buttons.Button();
-                await _client.SendTextMessageAsync(ChatId, "Доброе время суток!\nВыберите пожалуйста интересующую вас область:", replyMarkup: button.DrawAllThemes(TypesProgs.PatentEVM));
+            Button button = new Buttons.Button();
+            await _client.SendTextMessageAsync(ChatId, "Доброе время суток!\nВыберите пожалуйста интересующую вас область:", replyMarkup: button.DrawAllThemes(TypesProgs.PatentEVM));
         }
         /// <summary>
         /// Функция отпраки ответа (реализуется в мульти-командах)
@@ -228,7 +220,7 @@ namespace BRONUF_Main.Main.Commands.MultipleCommands
                     //Отсылаем сообщение о выбранной теме
                     await _client.SendTextMessageAsync(ChatId, $"Выбранная тема: \"{nameCommand}\"", replyMarkup: null);
                     //Объявляем новую тему
-                    Theme newTheme = new Theme(nameCommand,TypesProgs.PatentEVM);
+                    Theme newTheme = new Theme(nameCommand, TypesProgs.PatentEVM);
                     //Получаем список проектов в теме
                     List<Project> newList = Listprojects.Where(a => a.NameTheme.Equals(nameCommand)).ToList();
                     //Вспомогательная переменная для нумерации
@@ -249,7 +241,7 @@ namespace BRONUF_Main.Main.Commands.MultipleCommands
                     //Сообщение о том что пользователь прислал (или выбрал что то не то)
                     await _client.SendTextMessageAsync(ChatId, $"Темы с именем: {nameCommand}, не существует", replyMarkup: null);
                 }
-                
+
             }
         }
         /// <summary>
@@ -267,15 +259,15 @@ namespace BRONUF_Main.Main.Commands.MultipleCommands
             //Получаем индекс разделителя
             int index = Data.LastIndexOf(str);
             //получаем необходимые данные
-            Data = Data.Substring(index+str.Length, Data.Length - index - str.Length);
+            Data = Data.Substring(index + str.Length, Data.Length - index - str.Length);
             //Получеам список актуальных проектов
             Listprojects = CreatedProject.GetListProject();
             //Получаем проект с указанными данными
-            Project project = Listprojects!=null ? Listprojects.Find(a => a.NameProject.Contains(Data)) : null;
+            Project project = Listprojects != null ? Listprojects.Find(a => a.NameProject.Contains(Data)) : null;
             //Задержка (не в развитии)
             await Task.Delay(5000);
             //Объявляем список пользователей
-            List<Users> usersList=null;
+            List<Users> usersList = null;
             //Объявляем пользовател
             Users user = null;
             //Если файл пользователей существует
@@ -310,7 +302,7 @@ namespace BRONUF_Main.Main.Commands.MultipleCommands
                     //Если всё хорошо и всё существует, создаём платёж
                     MyPay myPay = new MyPay();
                     myPay.CreatePay(_client, ChatId, project, TypesProgs.PatentEVM);
-                } 
+                }
             }
         }
 
@@ -326,6 +318,6 @@ namespace BRONUF_Main.Main.Commands.MultipleCommands
             countQwesh = 0;
         }
     }
-   
+
 
 }

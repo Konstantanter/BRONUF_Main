@@ -125,10 +125,15 @@
     <Compile Include="Main\Buttons\Menu\SearchScientificPapers\SearchScientificPapersMenu.cs" />
     <Compile Include="Main\Buttons\Menu\SearchScientificPapers\SearchUtilityInvencion\ButtonsSearchUtilityInvencion.cs" />
     <Compile Include="Main\Buttons\Registrarion\ButtonsRegistration.cs" />
+    <Compile Include="Main\Buttons\SpravSystem\AboutBRONUF\ButtonsAboutBRONUF.cs" />
+    <Compile Include="Main\Buttons\SpravSystem\AboutOur\ButtonsAboutOur.cs" />
     <Compile Include="Main\Buttons\SpravSystem\ButtonsSpravSystem.cs" />
     <Compile Include="Main\Buttons\SpravSystem\Instruction\ButtonsInstruction.cs" />
     <Compile Include="Main\Buttons\SpravSystem\ScientificPapers\ButtonsScientificPapersHelp.cs" />
     <Compile Include="Main\Buttons\SpravSystem\ButtonsSpravSystemMenu.cs" />
+    <Compile Include="Main\Buttons\SpravSystem\ScientificPapers\ButtonsScientificPapersHelpMenu.cs" />
+    <Compile Include="Main\Buttons\SpravSystem\ScientificPapers\DataBase\ButtonsScientificDataBase.cs" />
+    <Compile Include="Main\Buttons\SpravSystem\ScientificPapers\EVM\ButtonsScientificEVM.cs" />
     <Compile Include="Main\Buttons\SpravSystem\Support\ButtonsSupport.cs" />
     <Compile Include="Main\Buttons\SpravSystem\UniversitiesAndOrganizations\UniversitiesAndOrganizationsButtons.cs" />
     <Compile Include="Main\Commands\CommandsMainsMenu.cs" />
@@ -137,8 +142,8 @@
     <Compile Include="Main\Commands\Menu\IndividualProject\ApplicationProgramm\CommandsApplicationProgramm.cs" />
     <Compile Include="Main\Commands\Menu\IndividualProject\ApplicationScheme%28TIMS%29\CommandsApplicationScheme.cs" />
     <Compile Include="Main\Commands\Menu\IndividualProject\ApplicationUtilityModel\CommandsApplicationUtilityModel.cs" />
-    <Compile Include="Main\Commands\Menu\IndividualProject\CommandsChildMenu.cs" />
-    <Compile Include="Main\Commands\Menu\IndividualProject\CommandsDrawMainsMenu.cs" />
+    <Compile Include="Main\Commands\Menu\CommandsChildMenu.cs" />
+    <Compile Include="Main\Commands\Menu\CommandsDrawMainsMenu.cs" />
     <Compile Include="Main\Commands\Menu\IndividualProject\CommandsIndividualProject.cs" />
     <Compile Include="Main\Commands\Menu\ReadySolutionMode\Akt\CommandsAkt.cs" />
     <Compile Include="Main\Commands\Menu\ReadySolutionMode\BAK\CommandsBAK.cs" />
@@ -156,8 +161,13 @@
     <Compile Include="Main\Commands\Menu\SearchScientificPapers\GetForm16\ProjectListHelper.cs" />
     <Compile Include="Main\Commands\Registration\MultipleRegUser.cs" />
     <Compile Include="Main\Commands\Resources\Start\CommandsStart.cs" />
+    <Compile Include="Main\Commands\SpravSystem\AboutBRONUF\CommandsAboutBRONUF.cs" />
+    <Compile Include="Main\Commands\SpravSystem\AboutOur\CommandsAboutOur.cs" />
     <Compile Include="Main\Commands\SpravSystem\CommandsSpravSystemMenu.cs" />
     <Compile Include="Main\Commands\SpravSystem\Instruction\CommandsInstruction.cs" />
+    <Compile Include="Main\Commands\SpravSystem\ScientificPapers\CommandsScientificDataBase.cs" />
+    <Compile Include="Main\Commands\SpravSystem\ScientificPapers\CommandsScientificEVM.cs" />
+    <Compile Include="Main\Commands\SpravSystem\ScientificPapers\CommandsScientificPapersMenu.cs" />
     <Compile Include="Main\Commands\SpravSystem\Support\CommandsSupport.cs" />
     <Compile Include="Main\Projects\GenerationsDoc\GenListSveds.cs" />
     <Compile Include="Main\Projects\ServiceCreatedPatentBD.cs" />
@@ -217,12 +227,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="money-safe_icon-icons.com_53091.ico" />
+    <None Include="Resources\DataBase.jpg" />
+    <None Include="Resources\Sved.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Main\Buttons\Menu\SearchScientificPapers\GetApplication\" />
-    <Folder Include="Main\Buttons\SpravSystem\AboutBRONUF\" />
-    <Folder Include="Main\Commands\SpravSystem\AboutBRONUF\" />
-    <Folder Include="Main\Commands\SpravSystem\ScientificPapers\" />
     <Folder Include="Main\Commands\SpravSystem\UniversitiesAndOrganizations\" />
   </ItemGroup>
   <ItemGroup>

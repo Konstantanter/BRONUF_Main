@@ -10,8 +10,10 @@ namespace BRONUF_Main.Main.Commands.Menu.IndividualProject
         /// <summary>
         /// Команда "Заказать индивидуальный проект"
         /// </summary>
-        public CommandsIndividualProject()
-        {}
+        public CommandsIndividualProject() {}
+        /// <summary>
+        /// Переопределение имени команды
+        /// </summary>
         public override System.String Name { set; get; } = Buttons.Button.ButtonsIndividualProject;
         public override async void Execute(TelegramBotClient _client, long ChatId)
         {

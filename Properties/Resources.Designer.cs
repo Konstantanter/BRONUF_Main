@@ -79,11 +79,31 @@ namespace BRONUF_Main.Properties {
         }
         
         /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DataBase {
+            get {
+                object obj = ResourceManager.GetObject("DataBase", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на 629007371.
         /// </summary>
         internal static string KostetIdChat {
             get {
                 return ResourceManager.GetString("KostetIdChat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sved {
+            get {
+                object obj = ResourceManager.GetObject("Sved", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

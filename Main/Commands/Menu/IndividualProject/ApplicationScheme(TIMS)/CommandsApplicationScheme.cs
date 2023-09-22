@@ -11,10 +11,9 @@ namespace BRONUF_Main.Main.Commands.Menu.IndividualProject
         /// Команда "Оформить заявку: схема (ТИМС)"
         /// </summary>
         public CommandsApplicationScheme() { }
-        public override System.String Name { set; get; } = Buttons.Button.ButtonsApplicationScheme;
+        public override string Name { set; get; } = Buttons.Button.ButtonsApplicationScheme;
         public override async void Execute(TelegramBotClient _client, long ChatId)
         {
-            var button = new Buttons.Button();
             await _client.SendTextMessageAsync(ChatId, Buttons.Button.ButtonNotDevelop, Telegram.Bot.Types.Enums.ParseMode.Html, replyMarkup: null);
         }
         public override Commands ParentsComands { set; get; } = new CommandsChildMenu();

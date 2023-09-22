@@ -1,15 +1,14 @@
 ﻿using BRONUF_Library;
 using BRONUF_Library.Projects;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BRONUF_Main.Main.Projects
 {
     public class ServiceCreatedPatentEVM : ServiceCreatedProject
     {
+        /// <summary>
+        /// Сервис для генерации документов на Программу для ЭВМ
+        /// </summary>
         public ServiceCreatedPatentEVM()
         {
             theme = new Theme(TypesProgs.PatentEVM);

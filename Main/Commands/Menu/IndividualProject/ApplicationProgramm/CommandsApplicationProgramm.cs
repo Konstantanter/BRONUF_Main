@@ -11,7 +11,10 @@ namespace BRONUF_Main.Main.Commands.Menu.IndividualProject
         /// Команда "Оформить заявку: Программа"
         /// </summary>
         public CommansApplicationProgramm() { }
-        public override System.String Name { set; get; } = Buttons.Button.ButtonsApplicationProgramm;
+        /// <summary>
+        /// Перегрузка операции имени команды
+        /// </summary>
+        public override string Name { set; get; } = Buttons.Button.ButtonsApplicationProgramm;
         public override async void Execute(TelegramBotClient _client, long ChatId)
         {
             var button = new Buttons.Button();

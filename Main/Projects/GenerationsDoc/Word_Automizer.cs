@@ -9,13 +9,10 @@ namespace BRONUF_Main.Main.Projects.GenerationsDoc
 {
     public partial class Word_Gen
     {
-
         /// <summary>
         /// Директория для сохранения
         /// </summary>
-        string dir;
-
-
+        private readonly string dir;
         /// <summary>
         /// Месяц регистрации
         /// </summary>
@@ -25,20 +22,18 @@ namespace BRONUF_Main.Main.Projects.GenerationsDoc
         /// Год регистрации
         /// </summary>
         public string YEAR { get; set; }
-
         /// <summary>
         /// Имя программы
         /// </summary>
         public string name_of_programm { get; set; }
-
         /// <summary>
         /// Имя проекта
         /// </summary>
-        string Name_proj { get; set; }
+        private string Name_proj { get; set; }
         /// <summary>
         /// Установка видимости приложения Word
         /// </summary>
-        public bool VISIBLE { set { WORD.Visible = value; } }
+        public bool VISIBLE { set => WORD.Visible = value; }
         /// <summary>
         /// Документ
         /// </summary>
@@ -46,21 +41,24 @@ namespace BRONUF_Main.Main.Projects.GenerationsDoc
         /// <summary>
         /// Приложение
         /// </summary>
-        Application WORD;
+        private readonly Application WORD;
         /// <summary>
         /// Вспомогательная переменная Type.Missing
         /// </summary>
-        object t;
+        private object t;
         /// <summary>
         /// Путь к папке с нашим проектом
         /// </summary>
         public static string DirectoryProject;
         public string ParentDirectory = GeneralData.MainPath + @"Project\Generation\";
+        /// <summary>
+        /// Имя проекта
+        /// </summary>
         public static string NameProject;
         /// <summary>
         /// Вспомогательная переменная range
         /// </summary>
-        Range range;
+        private Range range;
         /// <summary>
         /// Создание экземпляра класса создания документов
         /// </summary>
@@ -89,7 +87,7 @@ namespace BRONUF_Main.Main.Projects.GenerationsDoc
                 case 12: MOUNTH = "декабря"; break;
 
             }
-           // Anotation = AnothProject;
+            // Anotation = AnothProject;
             YEAR = Convert.ToString(time.Year);
             name_of_programm = Name_of_programm;
             t = Type.Missing;
@@ -102,7 +100,7 @@ namespace BRONUF_Main.Main.Projects.GenerationsDoc
             DirectoryProject = dir;
             dir += "\\";
             WORD = new Application();
-        
+
         }
         public void Quit()
         {
@@ -120,6 +118,7 @@ namespace BRONUF_Main.Main.Projects.GenerationsDoc
         {
             return Name_proj;
         }
+
         /// <summary>
         /// Функция преобразования текста
         /// </summary>
@@ -130,7 +129,7 @@ namespace BRONUF_Main.Main.Projects.GenerationsDoc
         /// 3 -> у text меняется размер шрифта на 11
         /// 4 -> text перестыёт быть жирным
         /// 5-> курсив</param>
-        void Transform_Text(string text, int mode = 0)
+        private void Transform_Text(string text, int mode = 0)
         {
             object findText = text;
             Selection wrdSelection;
@@ -138,8 +137,16 @@ namespace BRONUF_Main.Main.Projects.GenerationsDoc
                                                ref t, ref t, ref t, ref t, ref t, ref t, ref t, ref t, ref t))
             {
                 wrdSelection = WORD.Selection;
-                if (mode == 0) wrdSelection.Font.Bold = 1;
-                if (mode == 1) wrdSelection.Font.Underline = WdUnderline.wdUnderlineSingle;
+                if (mode == 0)
+                {
+                    wrdSelection.Font.Bold = 1;
+                }
+
+                if (mode == 1)
+                {
+                    wrdSelection.Font.Underline = WdUnderline.wdUnderlineSingle;
+                }
+
                 if (mode == 2)
                 {
                     wrdSelection.Font.Underline = WdUnderline.wdUnderlineSingle;
@@ -149,8 +156,15 @@ namespace BRONUF_Main.Main.Projects.GenerationsDoc
                 {
                     wrdSelection.Font.Size = 11;
                 }
-                if (mode == 4) wrdSelection.Font.Bold = 0;
-                if (mode == 5) wrdSelection.Font.Italic = 1;
+                if (mode == 4)
+                {
+                    wrdSelection.Font.Bold = 0;
+                }
+
+                if (mode == 5)
+                {
+                    wrdSelection.Font.Italic = 1;
+                }
             }
             Doc.Select();
             WORD.Selection.Collapse();
@@ -206,7 +220,10 @@ namespace BRONUF_Main.Main.Projects.GenerationsDoc
                 }
                 return clearList;
             }
-            else return clearList;
+            else
+            {
+                return clearList;
+            }
         }
 
     }
