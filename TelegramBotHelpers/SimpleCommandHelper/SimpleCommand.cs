@@ -61,6 +61,10 @@ namespace BRONUF_Main
 
                 //Меню справочной системы
                 new CommandSpravSystemMenu(),
+                    //Инструкция по использованию
+                    new CommandsInstructionMenu(),
+                        //Как стать участником программы для ЭВМ
+                        new CommandsInstructionEVM(),
                     //Поддержка
                     new CommandsSupport(),
                     //Команда отрисовки меню "Научные труды что и для чего"

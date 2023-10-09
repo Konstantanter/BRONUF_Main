@@ -129,6 +129,8 @@
     <Compile Include="Main\Buttons\SpravSystem\AboutOur\ButtonsAboutOur.cs" />
     <Compile Include="Main\Buttons\SpravSystem\ButtonsSpravSystem.cs" />
     <Compile Include="Main\Buttons\SpravSystem\Instruction\ButtonsInstruction.cs" />
+    <Compile Include="Main\Buttons\SpravSystem\Instruction\ButtonsInstructionMenu.cs" />
+    <Compile Include="Main\Buttons\SpravSystem\Instruction\EVM\InstructionEVM.cs" />
     <Compile Include="Main\Buttons\SpravSystem\ScientificPapers\ButtonsScientificPapersHelp.cs" />
     <Compile Include="Main\Buttons\SpravSystem\ButtonsSpravSystemMenu.cs" />
     <Compile Include="Main\Buttons\SpravSystem\ScientificPapers\ButtonsScientificPapersHelpMenu.cs" />
@@ -165,6 +167,7 @@
     <Compile Include="Main\Commands\SpravSystem\AboutOur\CommandsAboutOur.cs" />
     <Compile Include="Main\Commands\SpravSystem\CommandsSpravSystemMenu.cs" />
     <Compile Include="Main\Commands\SpravSystem\Instruction\CommandsInstruction.cs" />
+    <Compile Include="Main\Commands\SpravSystem\Instruction\InstructionEVM\CommandsInstructionEVM.cs" />
     <Compile Include="Main\Commands\SpravSystem\ScientificPapers\CommandsScientificDataBase.cs" />
     <Compile Include="Main\Commands\SpravSystem\ScientificPapers\CommandsScientificEVM.cs" />
     <Compile Include="Main\Commands\SpravSystem\ScientificPapers\CommandsScientificPapersMenu.cs" />

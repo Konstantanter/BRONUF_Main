@@ -22,7 +22,7 @@ namespace BRONUF_Main.Main.Buttons
                             new KeyboardButton { Text = ButtonsSupport}},
                         //Инструкция по использованию
                         new List<KeyboardButton>{
-                            new KeyboardButton { Text = ButtonsInstruction}},
+                            new KeyboardButton { Text = ButtonsInstructionMenu}},
                         //Научные труды что и для чего
                         new List<KeyboardButton>{
                             new KeyboardButton { Text = ButtonsScientificPapersHelp}},
